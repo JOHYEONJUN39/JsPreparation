@@ -168,3 +168,20 @@
 // NPM은 전 세계의 개발자들이 만든 다양한 기능(패키지, 모듈)들을 관리.
 // 100만개 이상의 패키지가 들어있음.
 // 이미 완성되어있는 기능을 모듈처럼 활용가능.
+
+const startButton = document.querySelector('.start-button');
+const overlay = document.querySelector('.overlay');
+
+startButton.addEventListener('mouseenter', () => {
+  startButton.style.transform = 'scale(1.2)';
+  overlay.style.width = '100%';
+  overlay.style.height = '100%';
+  overlay.style.opacity = 0.8;
+});
+
+startButton.addEventListener('mouseleave', () => {
+  startButton.style.transform = 'scale(1)';
+  overlay.style.width = 0;
+  overlay.style.height = 0;
+  overlay.style.opacity = 0;
+});
