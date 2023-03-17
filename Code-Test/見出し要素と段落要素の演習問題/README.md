@@ -5,7 +5,7 @@
 <p>この文章に見出し要素や段落要素を加えて、</p>
 <p>下の画像のようなページになるようにしましょう。</p>
 
-<img src="https://img-c.udemycdn.com/redactor/raw/coding_exercise_instructions/2021-10-02_11-31-41-04b316c46a96f659f3e4edd8878fd1d3.png" width="850px" height="300px" alt="CodeTest"></img>
+<img src="https://img-c.udemycdn.com/redactor/raw/coding_exercise_instructions/2021-10-02_11-31-41-04b316c46a96f659f3e4edd8878fd1d3.png" width="850px" height="500px" alt="CodeTest"></img>
 
 ```html
 <h1>アリクイ</h1>
