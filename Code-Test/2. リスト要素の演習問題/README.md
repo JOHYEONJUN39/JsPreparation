@@ -4,7 +4,7 @@
 <p>index.html にHTMLが中途半端に書いてあります。?</p>
 <p>この中身を完成させて下図のようなリストが２つ表示されるようにしましょう。</p>
 
-<img src="https://img-c.udemycdn.com/redactor/raw/coding_exercise_instructions/2021-10-02_12-03-15-9df87b36e7636d5ab666103edffbbdeb.png" width="300px" height="800px" alt="CodeTest"></img>
+<img src="https://img-c.udemycdn.com/redactor/raw/coding_exercise_instructions/2021-10-02_12-03-15-9df87b36e7636d5ab666103edffbbdeb.png" width="450px" height="800px" alt="CodeTest"></img>
 
 ```html
 <h1>映画</h1>
