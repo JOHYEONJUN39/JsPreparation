@@ -8,4 +8,9 @@
         <p>リンクの文字列は何でもOKです！</p>
     </li>
 </ul>
-<p></p>
+
+<ul>
+    <li>
+        <p>https://en.wikipedia.org/wiki/Wolfに遷移するリンクを作ってください。リンクの文字列は何でもOKです！</p>
+    </li>
+</ul>
