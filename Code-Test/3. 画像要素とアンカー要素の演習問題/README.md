@@ -11,6 +11,6 @@
 
 <ul>
     <li>
-        <p>https://en.wikipedia.org/wiki/Wolfに遷移するリンクを作ってください。リンクの文字列は何でもOKです！</p>
+        <p>https://en.wikipedia.org/wiki/Wolf<p>に遷移するリンクを作ってください。リンクの文字列は何でもOKです！</p></p>
     </li>
 </ul>
