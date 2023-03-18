@@ -48,5 +48,35 @@
         <input type="text" name="q">
         <button>구글 검색</button>
     </form>
+
+    <h2>Input</h2>
+
+    <form action="/birds">
+        <p>
+            <input type="checkbox" name="agree_tos" id="agree">
+            <label for="agree">이용규약에 동의하겠습니다.</label>
+        </p>
+
+        <p>
+            <label for="xs">xs</label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="S">S</label>
+            <input type="radio" name="size" id="S" value="s">
+            <label for="M">M</label>
+            <input type="radio" name="size" id="M" value="m">
+        </p>
+
+        <p>
+            <label for="meal">양파껍질을 벗겨주세요</label>
+            <select name="meal" id="meal">
+                <option value="fish">생선</option>
+                <option value="ptt">감자</option>
+                <option value="k" selected>쌈장</option>
+            </select>
+        </p>
+
+        <button>송신</button>
+    </form>
+
 </body>
 </html>
