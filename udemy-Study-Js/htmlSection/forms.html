@@ -23,7 +23,7 @@
 
         <p>
             <label for="number">숫자</label>
-            <input id="number" type="number" name="number">
+            <input id="number" type="number" name="number" min="0" max="1000" step="50" value="0">
 
         </p>
         
@@ -78,6 +78,12 @@
         <p>
             <label for="">치즈 양</label>
             <input type="range" min="1" max="100" name="cheese" value="75">
+        </p>
+
+        <p>
+            <label for="comment">그 외의 질문 : </label>
+            <br>
+            <textarea id="comment" rows="10" cols="40" placeholder="질문을 남겨주세요."></textarea>
         </p>
 
         <button>송신</button>
