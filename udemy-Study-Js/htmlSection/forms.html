@@ -89,5 +89,22 @@
         <button>송신</button>
     </form>
 
+    <h2>밸리데이션</h2>
+    <form action="/dummy">
+        <label for="first">이름 : </label>
+        <input type="text" id="first" name="first" required>
+
+        <p>
+            <label for="username">유저이름</label>
+            <input type="text" name="username" id="username" minlength="10">
+        </p>
+
+        <p>
+            <!-- <input type="email" required> -->
+            <input type="url" required>
+        </p>
+        <button>송신</button>
+    </form>
+
 </body>
 </html>
