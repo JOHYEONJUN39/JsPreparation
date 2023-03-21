@@ -16,16 +16,50 @@ button {
     color: #f1faee;
 }
 
-.tag {
-    background-color: red;
-    color: #f1faee;
-    font-size: 16px;
-}
+
 
 .post a {
     color: #457b9d;
+    text-decoration: none;
 }
 
-footer .tag {
-   
+h2 + button {
+    background-color: pink;
+}
+
+nav > button{
+    color: #457b9d;
+}
+
+input[type="password"] {
+    color: greenyellow;
+}
+
+a[href*="google"] {
+    color: yellow;
+}
+
+.post button:hover {
+    background-color: red;
+    color: black;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.post button:active {
+    background-color: aqua;
+}
+
+.post h2:active{
+    color: red;
+}
+
+#checked:checked + label {
+    color: red;
+}
+
+footer:nth-of-type(3) {
+    background-color: #1d3557;
 }
