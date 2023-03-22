@@ -5,7 +5,7 @@
 <p>app.cssを使って以下の画像の状態を再現してください</p>
 <p>（下に細かい説明があります）：</p>
 
-<img src="https://img-c.udemycdn.com/redactor/raw/2020-10-05_21-01-45-de54eaca53cefb4ccb6d07cb0bbbda7a.png" width="200px" height="600px" alt="CodeTest"></img>
+<img src="https://img-c.udemycdn.com/redactor/raw/2020-10-05_21-01-45-de54eaca53cefb4ccb6d07cb0bbbda7a.png" width="600px" height="200px" alt="CodeTest"></img>
 
 <p>以下のスタイルを適用してください：</p>
 
