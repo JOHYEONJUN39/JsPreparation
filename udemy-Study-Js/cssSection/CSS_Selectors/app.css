@@ -39,10 +39,6 @@ a[href*="google"] {
     color: yellow;
 }
 
-.post button:hover {
-    background-color: red;
-    color: black;
-}
 
 .post a:hover {
     text-decoration: underline;
@@ -62,4 +58,27 @@ a[href*="google"] {
 
 footer:nth-of-type(3) {
     background-color: #1d3557;
+}
+
+h2::first-letter {
+    color: red;
+    font-size: 40px;
+}
+
+p::first-letter {
+    color: purple;
+}
+
+p::selection {
+    background-color: #39C5BB;
+    color: WHITE;
+}
+
+button:hover {
+    background-color: olive;
+    font-size: 10px;
+}
+.post button:hover {
+    background-color: red;
+    color: black;
 }
