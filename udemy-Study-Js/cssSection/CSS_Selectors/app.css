@@ -82,3 +82,7 @@ button:hover {
     background-color: red;
     color: black;
 }
+
+button {
+    background-color: magenta;
+}
