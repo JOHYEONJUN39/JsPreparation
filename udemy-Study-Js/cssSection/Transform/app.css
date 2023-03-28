@@ -10,6 +10,7 @@ h1 {
     width: 300px;
     font-size: 1.8em;
     text-align: center;
+    /* 외부여백 상・하 20px 좌・우 auto(화면 중앙) */
     margin: 20px auto;
     font-family: Courier New;
     font-weight: lighter;
@@ -28,10 +29,49 @@ h1:nth-of-type(4n) {
 }
 
 section:first-of-type h1:nth-of-type(1) {
+    /* 45도 회전 */
     rotate: 45deg;
+    /* 회전축 */
     transform-origin: bottom right;
 }
 section:first-of-type h1:nth-of-type(2) {
+    /* 크기 0.6배 */
     transform: scale(0.6);
+    
+              /* 세로 1배 가로 2배 */
+    /* transform: scale(1, 2); */
 }
 
+section:first-of-type h1:nth-of-type(3) {
+    transform: translateX(200px);
+}
+
+section:first-of-type h1:nth-of-type(4) {
+        /* 왼쪽으로 -200px, 아래로 100px */
+    transform: translate(-200px, 50px);
+}
+
+section:nth-of-type(2) h1:nth-of-type(1) {
+    /* X축에 30도의 일그러짐을 준다 */
+    transform: skew(30deg);
+}
+
+section:nth-of-type(2) h1:nth-of-type(2) {
+    /* X축에 30도, Y축에 5도 일그러짐을 준다 */
+    transform: skew(10deg, 5deg);
+}
+
+section:nth-of-type(2) h1:nth-of-type(3) {
+    /* 20도 회전시키고 크기를 1.3배 */
+    transform: rotate(20deg) scale(1.3);
+}
+
+section:nth-of-type(2) h1:nth-of-type(4) {
+    /* 왼쪽 -500px이동 0.5turn(반회전, 뒤집기) 세로 1.5배 */
+    transform: translateX(-500px) rotate(0.5turn) scaleY(1.5);   
+}
+
+/* 2번 섹션 전체적용 */
+/* section:nth-of-type(2) {
+    transform: scale(0.7) translateX(300px);
+} */
