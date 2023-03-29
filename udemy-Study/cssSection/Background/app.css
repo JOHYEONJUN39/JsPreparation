@@ -1,0 +1,11 @@
+section {
+    width: 80%;
+    height: 800px;
+    /* background-image: url("https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg");
+    background-size: 80% 800px;
+    background-position: center; */
+    background: center/40% no-repeat url("https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg");
+    margin: 0 auto;
+    color: black;
+    font-size: 100px;
+}
