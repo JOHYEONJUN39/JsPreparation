@@ -7,13 +7,13 @@ h1 {
 #container {
     background-color: #003049;
     width: 90%;
-    height: 500px;
+    /* height: 500px; */
     margin: 0 auto;
     border: 5px solid #003049;
     display: flex;
 
     /* container의 크기에 따라 작아지거나 커진다 */
-    flex-direction: column;
+    flex-direction: row;
     
     /* 주축의 컨텐츠 정렬 */
     justify-content: center;
@@ -22,7 +22,7 @@ h1 {
     flex-wrap: wrap;
 
     /* 교차축의 컨텐츠 정렬 */
-    align-items: flex-end;
+    /* align-items: flex-end; */
 
     /* align-content: space-between; */
 
@@ -32,14 +32,29 @@ h1 {
 #container div {
     width: 200px;
     height: 200px;
+    /* max-width: 300px; */
     text-align: center;
     font-size: 4em;
+    flex-basis: 200px;
+    /* flex-grow: 1; */
 }
 
 #container div:nth-of-type(4) {
     font-size: 6em;
 }
-
+/* 
 #container div:nth-of-type(5) {
     align-self: flex-start;
+} */
+
+
+div:nth-of-type(1) {
+    flex-grow: 1;
 }
+
+div:nth-of-type(5) {
+    /* flex-grow: 1; 보다 2배크게 */
+    flex-grow: 2;
+}
+
+
