@@ -1,4 +1,16 @@
 img {
     width: 30%;
-    margin: 20px;
+    margin: calc(10%/6);
+}
+
+nav {
+    /* 대문자 */
+    text-transform: uppercase;
+    border-bottom: 2px solid #f1f1f1;
+    width: 30%;
+    margin-left: calc(10%/6);
+    font-family: 'Raleway', sans-serif;
+    /* em으로 지정해서 font-size가 커질수록 padding도 같이 커진다 */
+    font-size: 1.5em;
+    padding: 1.2em 0;
 }
