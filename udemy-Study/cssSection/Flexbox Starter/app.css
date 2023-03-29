@@ -19,10 +19,14 @@ h1 {
     justify-content: center;
     
     /* 요소배치 강제성 */
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
 
     /* 교차축의 컨텐츠 정렬 */
-    align-items: flex-start;
+    align-items: flex-end;
+
+    /* align-content: space-between; */
+
+
 }
 
 #container div {
@@ -34,4 +38,8 @@ h1 {
 
 #container div:nth-of-type(4) {
     font-size: 6em;
+}
+
+#container div:nth-of-type(5) {
+    align-self: flex-start;
 }
