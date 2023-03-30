@@ -73,6 +73,8 @@ main {
 
 main .sidebar {
     background-color: purple;
+    
+    /* flex-grow: 1 flex-shrink: 2 flex-basis: 300px */
     flex: 1 2 300px;
     border: 5px solid black;
 }
