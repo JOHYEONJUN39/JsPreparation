@@ -1,9 +1,9 @@
 ## ボックスモデルの演習問題
 
-ボックスモデルやwidth、height、
-borderなどについて学びましたので、
-app.cssを使って以下の画像の状態を再現してください
-（下に細かい説明があります）：
+ボックスモデルやwidth、height、  
+borderなどについて学びましたので、  
+app.cssを使って以下の画像の状態を再現してください  
+（下に細かい説明があります）：  
 
 <img src="https://img-c.udemycdn.com/redactor/raw/2020-10-05_21-01-45-de54eaca53cefb4ccb6d07cb0bbbda7a.png">
 
