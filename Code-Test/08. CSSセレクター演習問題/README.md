@@ -1,14 +1,13 @@
 ## CSSセレクター演習問題
 
-<p>CSSセレクターの実際に使っていきましょう！ index.html</p>
-<p>には変更を加えずに、以下の状態になるように app.css</p>
-<p>を完成させてください：</p>
+CSSセレクターの実際に使っていきましょう！ `index.html`  
+には変更を加えずに、以下の状態になるように `app.css`  
+を完成させてください：  
 
-<ul>
-    <li>li 要素のテキストの色を青（blue）にする</li>
-    <li>doneのクラスをもっている要素のテキストの色を灰色（grey）にする</li>
-    <li>clearのIDをもつ要素には赤（red）の背景色と白（white）のテキストの色にする</li>
-</ul>
+- `li` 要素のテキストの色を青（`blue`）にする
+- `done`のクラスをもっている要素のテキストの色を灰色（`grey`）にする
+- `clear`のIDをもつ要素には赤（`red`）の背景色と白（`white`）のテキストの色にする
+
 <img src="https://img-c.udemycdn.com/redactor/raw/coding_exercise_instructions/2021-10-05_06-31-23-0238006b0025dcef4d95a0f010e9dc79.png" width="850px" height="400px" alt="CodeTest"></img>
 
 ```html
