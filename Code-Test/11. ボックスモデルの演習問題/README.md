@@ -10,15 +10,15 @@ app.cssを使って以下の画像の状態を再現してください
 以下のスタイルを適用してください：
 
 - card用のdiv
- - widthは210px
- - 1pxのgrey色のborder（border-styleはsolid）
- - 5pxのborder-radius
- - テキストは中央揃え（center）
+  - widthは210px
+  - 1pxのgrey色のborder（border-styleはsolid）
+  - 5pxのborder-radius
+  - テキストは中央揃え（center）
     
 - 画像
- - widthは200px
- - 5pxの色が rgb(236, 183, 191) のborder（border-styleはsolid）
- - 50%のborder-radius
+  - widthは200px
+  - 5pxの色が rgb(236, 183, 191) のborder（border-styleはsolid）
+  - 50%のborder-radius
     
 
 
