@@ -44,3 +44,17 @@
 //     console.log('FALSY');
 // }
 
+let movieLine = [`yamada`, `tanaka`];
+// 배열 끝에 추가
+movieLine.push(`satou`);
+movieLine.push(`nakamura`, `kimura`);
+// 배열 끝 요소 제거
+movieLine.pop();
+// 배열 첫 요소 제거
+movieLine.shift();
+// 배열 시작에 추가
+movieLine.unshift(`miku`);
+
+
+
+console.log(movieLine);
