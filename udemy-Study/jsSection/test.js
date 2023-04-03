@@ -44,17 +44,47 @@
 //     console.log('FALSY');
 // }
 
-let movieLine = [`yamada`, `tanaka`];
-// 배열 끝에 추가
-movieLine.push(`satou`);
-movieLine.push(`nakamura`, `kimura`);
-// 배열 끝 요소 제거
-movieLine.pop();
-// 배열 첫 요소 제거
-movieLine.shift();
-// 배열 시작에 추가
-movieLine.unshift(`miku`);
+// -----배열 메서드 -----
+// let movieLine = [`yamada`, `tanaka`];
+// // 배열 끝에 추가
+// movieLine.push(`satou`);
+// movieLine.push(`nakamura`, `kimura`);
+// // 배열 끝 요소 제거
+// movieLine.pop();
+// // 배열 첫 요소 제거
+// movieLine.shift();
+// // 배열 시작에 추가
+// movieLine.unshift(`miku`);
+
+// console.log(movieLine);
 
 
 
-console.log(movieLine);
+// let cats = [`tama`, `tora`];
+
+// let dogs = [`pochi`, `hachi`];
+// // concat : 배열을 합쳐서 새로운 배열을 만든다 (원래있던 배열에 변화 X 전혀 새로운 배열 O)
+// console.log(cats.concat(dogs));
+// // includes(포함) : cats배열에 `tama`가 포함되어있는지 확인 return값 : boolean
+// console.log(cats.includes(`tama`));
+// // indexOf : 요소의 index를 반환
+// console.log(cats.indexOf(`tama`));
+// // reverse : 배열을 뒤집는다. (역순)
+// console.log(cats.reverse());
+
+
+
+let colors = [`red`, `orange`, `yellow`, `green`, `blue`, `black`, `white`];
+
+// slice : 매개변수의 index부터 새로운 배열을 반환. (1, 4)면 1~3까지의 요소가 포함된 배열 반환.
+console.log(colors.slice(1));
+console.log(colors.slice(1, 4));
+// splice : 추가or제거할 index번호(매개변수1) 제거할 요소 수(매개변수2) 추가할 값(매개변수3 *옵션)
+console.log(colors.splice(5, 1));
+colors.splice(1, 0, `red-orange`);
+console.log(colors);
+
+
+
+// --------------------
+
