@@ -1,29 +1,26 @@
 ## ボックスモデルの演習問題
 
-<p>ボックスモデルやwidth、height、</p>
-<p>borderなどについて学びましたので、</p>
-<p>app.cssを使って以下の画像の状態を再現してください</p>
-<p>（下に細かい説明があります）：</p>
+ボックスモデルやwidth、height、
+borderなどについて学びましたので、
+app.cssを使って以下の画像の状態を再現してください
+（下に細かい説明があります）：
 
-<img src="https://img-c.udemycdn.com/redactor/raw/2020-10-05_21-01-45-de54eaca53cefb4ccb6d07cb0bbbda7a.png" width="600px" height="200px" alt="CodeTest"></img>
+<img src="https://img-c.udemycdn.com/redactor/raw/2020-10-05_21-01-45-de54eaca53cefb4ccb6d07cb0bbbda7a.png">
 
-<p>以下のスタイルを適用してください：</p>
+以下のスタイルを適用してください：
 
-<ul>
-    <li>card用のdiv</li>
-    <ul>
-        <li>widthは210px</li>
-        <li>1pxのgrey色のborder（border-styleはsolid）</li>
-        <li>5pxのborder-radius</li>
-        <li>テキストは中央揃え（center）</li>
-    </ul>
-    <li>画像</li>
-    <ul>
-        <li>widthは200px</li>
-        <li>5pxの色が rgb(236, 183, 191) のborder（border-styleはsolid）</li>
-        <li>50%のborder-radius</li>
-    </ul>
-</ul>
+- card用のdiv
+ - widthは210px
+ - 1pxのgrey色のborder（border-styleはsolid）
+ - 5pxのborder-radius
+ - テキストは中央揃え（center）
+    
+- 画像
+ - widthは200px
+ - 5pxの色が rgb(236, 183, 191) のborder（border-styleはsolid）
+ - 50%のborder-radius
+    
+
 
 ```html
 <div class="card">
