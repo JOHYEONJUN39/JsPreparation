@@ -8,7 +8,7 @@ CSSセレクターの実際に使っていきましょう！ `index.html`
 - `done`のクラスをもっている要素のテキストの色を灰色（`grey`）にする
 - `clear`のIDをもつ要素には赤（`red`）の背景色と白（`white`）のテキストの色にする
 
-<img src="https://img-c.udemycdn.com/redactor/raw/coding_exercise_instructions/2021-10-05_06-31-23-0238006b0025dcef4d95a0f010e9dc79.png" width="850px" height="400px" alt="CodeTest"></img>
+<img src="https://img-c.udemycdn.com/redactor/raw/coding_exercise_instructions/2021-10-05_06-31-23-0238006b0025dcef4d95a0f010e9dc79.png">
 
 ```html
 <h1>Todo</h1>
