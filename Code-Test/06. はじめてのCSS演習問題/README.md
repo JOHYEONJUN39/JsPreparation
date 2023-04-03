@@ -1,25 +1,24 @@
 ## はじめてのCSS演習問題
-<p>CSSの練習をしましょう！ index.html</p>
-<p>にHTMLを用意しました（触らないように注意！）。</p>
-<p>styles.css も用意しているので、</p>
-<p>そこにCSSを書きましょう</p>
-<p>書いてほしいCSSは以下のとおりです：</p>
-<p>
-    h1（見出し要素）
-        - 緑(green)色のテキスト 
-    h2（見出し要素）
-        - マジェンタ(magenta)色
-    段落要素
-        - 白(white)色のテキスト
-        - 黒(black)色の背景色
-    ボタン
-        - 赤(red)色のテキスト
-        - ピンク(pink)色の背景色
-</p>
+CSSの練習をしましょう！ index.html  
+にHTMLを用意しました（触らないように注意！）。  
+styles.css も用意しているので、  
+そこにCSSを書きましょう  
+書いてほしいCSSは以下のとおりです：  
 
-<p>正しく作ると、下図のようなページになります：</p>
+- h1（見出し要素）
+  - 緑(green)色のテキスト 
+- h2（見出し要素）
+  - マジェンタ(magenta)色
+- 段落要素
+  - 白(white)色のテキスト
+  - 黒(black)色の背景色
+- ボタン
+  - 赤(red)色のテキスト
+  - ピンク(pink)色の背景色
 
-<img src="https://img-c.udemycdn.com/redactor/raw/coding_exercise_instructions/2021-10-04_06-34-32-e8c617f43fede4707640937591b090f9.png" width="850px" height="300px" alt="CodeTest"></img>
+正しく作ると、下図のようなページになります：
+
+<img src="https://img-c.udemycdn.com/redactor/raw/coding_exercise_instructions/2021-10-04_06-34-32-e8c617f43fede4707640937591b090f9.png">
 
 ```html
 <!DOCTYPE html>
