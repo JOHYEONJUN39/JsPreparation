@@ -1,24 +1,24 @@
 ## ボックスモデルの演習問題
 
-ボックスモデルやwidth、height、  
-borderなどについて学びましたので、  
-app.cssを使って以下の画像の状態を再現してください  
+ボックスモデルや`width`、`height`、  
+`border`などについて学びましたので、  
+`app.css`を使って以下の画像の状態を再現してください  
 （下に細かい説明があります）：  
 
 <img src="https://img-c.udemycdn.com/redactor/raw/2020-10-05_21-01-45-de54eaca53cefb4ccb6d07cb0bbbda7a.png">
 
 以下のスタイルを適用してください：
 
-- card用のdiv
-  - widthは210px
-  - 1pxのgrey色のborder（border-styleはsolid）
-  - 5pxのborder-radius
-  - テキストは中央揃え（center）
+- card用の`div`
+  - `width`は210px
+  - 1pxのgrey色の`border`（`border-style`は`solid`）
+  - 5pxの`border-radius`
+  - テキストは中央揃え（`center`）
     
 - 画像
-  - widthは200px
-  - 5pxの色が rgb(236, 183, 191) のborder（border-styleはsolid）
-  - 50%のborder-radius
+  - `width`は200px
+  - 5pxの色が rgb(236, 183, 191) の`border`（`border-style`は`solid`）
+  - 50%の`border-radius`
     
 
 

@@ -1,12 +1,12 @@
 ## チェック模様の演習問題
 
-<p>このindex.htmlには25個の<div>要素が書かれています。</p>
-<p>また、それぞれにはsquareクラスが割り振られています。</p>
-<p>ここで、偶数番目のdivには黒色（black）の背景色を定義し、</p>
-<p>奇数番目のdivには赤色（red）</p>
-<p>の背景色が定義されるようにapp.cssを完成させてください。</p>
+この`index.html`には25個の`<div>`要素が書かれています。  
+また、それぞれには`square`クラスが割り振られています。  
+ここで、偶数番目のdivには黒色（`black`）の背景色を定義し、  
+奇数番目のdivには赤色（`red`）  
+の背景色が定義されるように`app.css`を完成させてください。  
 
-<img src="https://img-c.udemycdn.com/redactor/raw/2020-09-23_05-30-06-a4cd91f831586227989a53e16b2d9b23.png" width="500px" height="500px" alt="CodeTest"></img>
+<img src="https://img-c.udemycdn.com/redactor/raw/2020-09-23_05-30-06-a4cd91f831586227989a53e16b2d9b23.png">
 
 ```html
 <!doctype html>
