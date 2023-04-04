@@ -122,9 +122,17 @@
 
 // console.log(gameBoard[1][1]);
 
-const person = {
-    firstName:  `Taro`,
-    lastName:   `Yamada`
+// const person = {
+//     firstName:  `Taro`,
+//     lastName:   `Yamada`
+// }
+
+// console.log(person);
+
+const cat = {
+    name:   `Tama`,
+    age:    `2`,
+    colors: [`orange`, `white`],
+    isHungry:   true
 }
 
-console.log(person);

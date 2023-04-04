@@ -50,8 +50,11 @@ console.log(gameBoard[1][1]); // -> null
 - indexData에 엑세스 하는것이 아닌 키를 사용해 엑세스
 ```js
 예 )
+const a = {
 userName    : `yamada`,
 upVotes     : 7,
 text        : `안녕`
+}
 ```
 ### 오브젝트 리터럴을 사용해보자 オブジェクトリテラルを使ってみよう
+
