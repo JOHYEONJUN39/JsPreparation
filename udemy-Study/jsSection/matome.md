@@ -57,4 +57,31 @@ text        : `안녕`
 }
 ```
 ### 오브젝트 리터럴을 사용해보자 オブジェクトリテラルを使ってみよう
+```js
+예)
+const cat = {
+    name:   `Tama`,
+    age:    `2`,
+    colors: [`orange`, `white`],
+    isHungry:   true
+}
+
+console.log(cat[`name`]) // Tama
+console.log(cat.isHungry) // true
+```
+  
+```js
+const years = {
+    1999:   `good`,
+    2000:   `bad`
+}
+console.log(years[`1999`]) // good
+console.log(years.1999) // good
+- 오브젝트의 키는 String으로 변환된다.
+- 위와같이 숫자(number)로 키를 정의해도 String으로 변환된다.
+
+console.log(years[1999]) // good
+- 그냥 숫자를 넣어도 good이 반환되는 이유는
+- 1999가 String으로 변환된 후에 엑세스를 해서 good이 반환된다.
+```
 

@@ -136,3 +136,14 @@ const cat = {
     isHungry:   true
 }
 
+console.log(cat[`name`])
+console.log(cat.isHungry)
+
+const years = {
+    1999:   `good`,
+    2000:   `bad`
+}
+
+console.log(years[1999])
+
+
