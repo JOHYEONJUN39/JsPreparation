@@ -114,6 +114,10 @@
 // 하지만) nums = [12, 23, 34]; 는 불가능하다 ! 왜?
 // 전혀다른 배열이 생성되어 nums가 가르키는 배열의 주소값이 바뀌기떄문.
 
-console.log(nums);
 
 
+const gameBoard = [[`X`, `O`, `X`], [`O`, null, `X`], [`O`, `O`, `X`]];
+
+console.log(gameBoard);
+
+console.log(gameBoard[1][1]);

@@ -8,7 +8,7 @@ let nums = [1, 2, 3];
    
 let numsCopy = nums;
 nums배열의 **주소를** numsCopy에게 넘겨준다.  
-- 
+
 nums.push(4); (배열 끝에  요소추가)  
   
 console.log(numsCopy); // -> [1, 2, 3, 4]  
@@ -34,6 +34,15 @@ const는 상수인데 왜 배열은 값의 변경이 가능할까?
 **전혀다른 배열이 생성되어 `nums`가 가르키는 배열의 주소값이 바뀌기떄문.**
 
 
+## 다차원 배열　多次元配列
+
+```js
+const gameBoard = [[`X`, `O`, `X`], [`O`, null, `X`], [`O`, `O`, `X`]];
+배열 속에 배열을 넣어 다차원 배열을 생성할 수 있다.
+console.log(gameBoard);
+// gameBoard[3개의 배열중 접근 할 배열 index][그 배열에서 접근할 요소 index]
+console.log(gameBoard[1][1]); // -> null
+```
 
 
 
