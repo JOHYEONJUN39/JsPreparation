@@ -44,5 +44,14 @@ console.log(gameBoard);
 console.log(gameBoard[1][1]); // -> null
 ```
 
-
-
+## 오브젝트 オブジェクト
+- 오브젝트는 프로퍼티의 집합체
+- 프로퍼티는 키와 값의 페어
+- indexData에 엑세스 하는것이 아닌 키를 사용해 엑세스
+```js
+예 )
+userName    : `yamada`,
+upVotes     : 7,
+text        : `안녕`
+```
+### 오브젝트 리터럴을 사용해보자 オブジェクトリテラルを使ってみよう
