@@ -218,37 +218,58 @@
 //     omg++
 // }
 
-// 유저에게 최대수를 입력받는다
-let maximum = parseInt(prompt('숫자를 입력해 주십시오'));
-// parseInt는 문자를 입력받으면 NaN을 반환한다. NaN은 false기 때문에
-// while문을 이용해 재입력,경고를 true가 될때까지 반복 가능하다.
-while (!maximum) {
-    maximum = parseInt(prompt('문자가 아닌 숫자를 입력해 주십시오'));
-}
-// Math.random()으로 랜덤값을 생성, 입력받은 숫자를 곱하고 1을 더해 floor로 소수점을 버린다.
-const targetNum = Math.floor(Math.random() * maximum) + 1;
-let count = 1;
+// // 유저에게 최대수를 입력받는다
+// let maximum = parseInt(prompt('숫자를 입력해 주십시오'));
+// // parseInt는 문자를 입력받으면 NaN을 반환한다. NaN은 false기 때문에
+// // while문을 이용해 재입력,경고를 true가 될때까지 반복 가능하다.
+// while (!maximum) {
+//     maximum = parseInt(prompt('문자가 아닌 숫자를 입력해 주십시오'));
+// }
+// // Math.random()으로 랜덤값을 생성, 입력받은 숫자를 곱하고 1을 더해 floor로 소수점을 버린다.
+// const targetNum = Math.floor(Math.random() * maximum) + 1;
+// let count = 1;
 
-console.log(targetNum);
+// console.log(targetNum);
 
-let guess = prompt('랜덤수를 정했습니다. 숫자를 맞춰주세요');
-// 유저 입력값이 target값과 일치할때까지 반복
-while (parseInt(guess) !== targetNum) {
-    // guess가 `q`일때 게임 종료
-    if (guess === `q`) {
-        break;
-    }
-    count ++
-    if (guess > targetNum ) {
-        guess = prompt('그 숫자보다 작습니다.');
-    }
-    else {
-        guess = prompt('그 숫자보다 큽니다.');
-    }
-}
-if (guess === 'q') {
-    console.log(`게임을 종료합니다.`);
-}
-else {
-    console.log(`축하합니다. ${count}번 만에 맞췄습니다.`);
-}
+// let guess = prompt('랜덤수를 정했습니다. 숫자를 맞춰주세요');
+// // 유저 입력값이 target값과 일치할때까지 반복
+// while (parseInt(guess) !== targetNum) {
+//     // guess가 `q`일때 게임 종료
+//     if (guess === `q`) {
+//         break;
+//     }
+//     count ++
+//     if (guess > targetNum ) {
+//         guess = prompt('그 숫자보다 작습니다.');
+//     }
+//     else {
+//         guess = prompt('그 숫자보다 큽니다.');
+//     }
+// }
+// if (guess === 'q') {
+//     console.log(`게임을 종료합니다.`);
+// }
+// else {
+//     console.log(`축하합니다. ${count}번 만에 맞췄습니다.`);
+// }
+
+// const subReddits = [`cooking`, `books`, `chickens`, `life`, `pics`];
+
+// // subReddits의 길이만큼 반복하며 선언해준 변수에 저장
+// for (let subReddit of subReddits) {
+//     console.log(subReddit);
+// }
+
+// const seatingChart = [
+//     [`A`,`B`,`C`],
+//     [`D`,`E`,`F`],
+//     [`G`,`H`,`I`]
+// ];
+// // seatingChart의 길이만큼 반복하며 변수 row에 저장
+// for (let row of seatingChart) {
+//     // row의 길이 (예를들어 0번쨰 [`A`,`B`,`C`] -> 3) 번만큼 반복 요소를 Al에 저장
+//     for (let Al of row) {
+//         console.log(Al);
+//     }
+// }
+

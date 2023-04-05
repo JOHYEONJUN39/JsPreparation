@@ -70,3 +70,29 @@ else {
     console.log(`축하합니다. ${count}번 만에 맞췄습니다.`);
 }
 ```
+
+## for...of 루프
+- 열거 가능한 오브젝트에 사용가능
+- 배열 뿐만아니라 문자열등등 열거가능하면 사용가능 (문자열이 오브젝트인 이유는 나중에 알아보자)
+```js
+const subReddits = [`cooking`, `books`, `chickens`, `life`, `pics`];
+
+// subReddits의 길이만큼 반복하며 선언해준 변수에 저장
+for (let subReddit of subReddits) {
+    console.log(subReddit);
+}
+```
+```js
+const seatingChart = [
+    [`A`,`B`,`C`],
+    [`D`,`E`,`F`],
+    [`G`,`H`,`I`]
+];
+// seatingChart의 길이만큼 반복하며 변수 row에 저장
+for (let row of seatingChart) {
+    // row의 길이 (예를들어 0번쨰 [`A`,`B`,`C`] -> 3) 번만큼 반복 요소를 Al에 저장
+    for (let Al of row) {
+        console.log(Al);
+    }
+}
+```
