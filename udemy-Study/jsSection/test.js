@@ -174,3 +174,15 @@
 // console.log(comments[0][`text`]); // `오하요`
 
 
+// const animal = [`lion`, `tigers`, `bears`];
+
+// for (let i = 0; i < animal.length; i++ ){
+//     console.log(animal[i])
+// }
+
+const people = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred"]; 
+
+for (let i = 0; i < people.length; i++ ) {
+    console.log(people[i].toUpperCase())
+}
+
