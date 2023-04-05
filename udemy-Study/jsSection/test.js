@@ -174,6 +174,3 @@
 // console.log(comments[0][`text`]); // `오하요`
 
 
-for (let i = 100; i >= 0; i-= 10 ) {
-    console.log(i);
-}
