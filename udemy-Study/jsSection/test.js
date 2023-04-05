@@ -273,3 +273,30 @@
 //     }
 // }
 
+const testScores = {
+    ken: 80,
+    yuki: 67,
+    taro: 89,
+    ryota: 91,
+    yuko: 74,
+    chiaki: 96,
+    koki: 60,
+    saeko: 69,
+    kota: 99
+}
+
+// for (let x of testScores) {
+//     console.log(x);
+// }
+// 오류!
+// 오브젝트는 원래 열거가능한 요소가 아니라 for...of로 호출 불가능
+
+// Object.keys는 오브젝트의 키값을 배열로 만들어준다.
+console.log(Object.keys(testScores));
+// ['ken', 'yuki', 'taro', 'ryota', 'yuko', 'chiaki', 'koki', 'saeko', 'kota']
+
+// 배열로 바뀐 testScores의 길이만큼반복 , key값(지금은 이름)을 student에 저장
+for (let student of Object.keys(testScores)) {
+    // {이름}씨는 {데이터}(오브젝트 접근법을 사용)
+    console.log(`${student}씨는${testScores[student]}`);
+}
