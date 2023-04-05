@@ -129,21 +129,48 @@
 
 // console.log(person);
 
-const cat = {
-    name:   `Tama`,
-    age:    `2`,
-    colors: [`orange`, `white`],
-    isHungry:   true
-}
+// const cat = {
+//     name:   `Tama`,
+//     age:    `2`,
+//     colors: [`orange`, `white`],
+//     isHungry:   true
+// }
 
-console.log(cat[`name`])
-console.log(cat.isHungry)
+// console.log(cat[`name`])
+// console.log(cat.isHungry)
 
-const years = {
-    1999:   `good`,
-    2000:   `bad`
-}
+// const years = {
+//     1999:   `good`,
+//     2000:   `bad`
+// }
 
-console.log(years[1999])
+// console.log(years[1999])
+
+
+// const midterms = {
+//     taro:   96,
+//     jiro:   78
+// }
+
+// console.log(midterms.jiro);
+// midterms.jiro = 79;
+// // 배열과 마찬가지로 midterms가 오브젝트 주소를 참조하고있다.
+
+// ### 데이터 추가
+// midterms.saburo // midterms.saburo -> 적용X
+// midterms.saburo = 120; // 값이 주어졌을때 비로소 오브젝트에 보인다.
+// midterms[`shiro`] = `A+`; // 대괄호로 새 데이터 추가하기
+// console.log(midterms); // {taro: 96, jiro: 79, saburo: 120, shiro: 'A+'}
+
+const comments = [
+    {"username":  `yamada`, text: `오하요`, votes:  9},
+    {"username":  `tanaka`, text: `곤니치와`, votes: 12}
+]
+
+console.log(comments);
+
+// comments[배열의 1번째].접근할 데이터
+console.log(comments[1].text); // `곤니치와`
+console.log(comments[0][`text`]); // `오하요`
 
 
