@@ -162,15 +162,15 @@
 // midterms[`shiro`] = `A+`; // 대괄호로 새 데이터 추가하기
 // console.log(midterms); // {taro: 96, jiro: 79, saburo: 120, shiro: 'A+'}
 
-const comments = [
-    {"username":  `yamada`, text: `오하요`, votes:  9},
-    {"username":  `tanaka`, text: `곤니치와`, votes: 12}
-]
+// const comments = [
+//     {"username":  `yamada`, text: `오하요`, votes:  9},
+//     {"username":  `tanaka`, text: `곤니치와`, votes: 12}
+// ]
 
-console.log(comments);
+// console.log(comments);
 
-// comments[배열의 1번째].접근할 데이터
-console.log(comments[1].text); // `곤니치와`
-console.log(comments[0][`text`]); // `오하요`
+// // comments[배열의 1번째].접근할 데이터
+// console.log(comments[1].text); // `곤니치와`
+// console.log(comments[0][`text`]); // `오하요`
 
 
