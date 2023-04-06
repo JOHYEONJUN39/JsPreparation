@@ -421,14 +421,51 @@
 // isAdult(40); // true
 // isSenior(100); // true
 
-const myMath = {
-    PI: 3.14,
-    // 오브젝트 데이터에 함수를 선언한다.
-    square(num) {
-        return num * num;
-    },
-    cube(num) {
-        return num ** 3;
-    }
-}
+// const myMath = {
+//     PI: 3.14,
+//     // 오브젝트 데이터에 함수를 선언한다.
+//     square(num) {
+//         return num * num;
+//     },
+//     cube(num) {
+//         return num ** 3;
+//     }
+// }
 
+// const cat = {
+//     name: '타마',
+//     color: 'grey',
+//     bread: '사향',
+//     cry() {
+//         console.log(`${this.name}가 운다.`);
+//     }
+// }
+
+// const cry2 = cat.cry;
+
+// // cat.cry(); 를 호출했을 때 this는 cat이 됨
+// cat.cry(); // 타마가 운다.
+
+// // cry2(); 를 호출했을 때 window에 있는 cry2를 호출해서 this가 날아간것
+// // 자바스크립트에서 만든 거의 모든것이 window에 들어가있다.
+// // 자바의 최상위클래스 object클래스와 유사
+// cry2(); // 가 운다.
+
+// const hen = {
+//     name: 'Helen',
+//     eggCount: 0,
+//     layAnEgg() {
+//         this.eggCount ++;
+//         return 'EGG';
+//     }
+// }
+
+
+// try {
+//     hello.toUpperCase();
+// }
+// catch {
+//     console.log('에러가 났습니다.');
+// }
+
+console.log('실행');

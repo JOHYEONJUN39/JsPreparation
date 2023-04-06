@@ -69,7 +69,7 @@ myMath['cube'](2); // 8
 ```js
 const myMath = {
     PI: 3.14,
-    
+
     square(num) {
         return num * num;
     },
@@ -79,5 +79,31 @@ const myMath = {
 }
 ```
 
+### 메서드의 this
+- this의 값은,   
+this를 사용하고있는 함수가 "어떻게 호출되고있는지"에 의존한다.
 
+```js
+const cat = {
+    name: '타마',
+    color: 'grey',
+    bread: '사향',
+    cry() {
+        console.log(`${this.name}가 운다.`);
+    }
+}
 
+const cry2 = cat.cry;
+
+// cat.cry(); 를 호출했을 때 this는 cat이 됨
+cat.cry(); // 타마가 운다.
+
+// cry2(); 를 호출했을 때 window에 있는 cry2를 호출해서 this가 날아간것
+// 자바스크립트에서 만든 거의 모든것이 window에 들어가있다.
+// 자바의 최상위클래스 object클래스와 유사
+cry2(); // 가 운다.
+```
+
+## try, catch
+- 에러가 발생하면 프로그램이 종료된다.
+- 프로그램이 종료되지않게 하기위해 try, catch로 예외처리를 해준다.
