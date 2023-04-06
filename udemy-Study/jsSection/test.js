@@ -303,22 +303,54 @@
 
 
 
-let quit = true;
-const todo = [];
-while(quit === true) {
-    let userInput = prompt('커맨드를 입력해주세요 유효 커맨드 : new, list, delete, quit')
-    if (userInput === 'new') {
-        todo.push(prompt('추가할 todo를 입력해 주세요.'));
-    }
-    else if (userInput === 'list') {
-        for (let i = 0; i < todo.length; i++ ) {
-            console.log(`[${i}] : ${todo[i]}`);
-        }
-    }
-    else if (userInput === 'delete' ) {
-        todo.splice(parseInt(prompt('삭제할 index를 입력해 주세요.')), 1);
-    }
-    else if (userInput === 'quit') {
-        break;
-    }
-} 
+// let quit = true;
+// const todo = [];
+// while(quit === true) {
+//     let userInput = prompt('커맨드를 입력해주세요 유효 커맨드 : new, list, delete, quit')
+//     if (userInput === 'new') {
+//         todo.push(prompt('추가할 todo를 입력해 주세요.'));
+//     }
+//     else if (userInput === 'list') {
+//         for (let i = 0; i < todo.length; i++ ) {
+//             console.log(`[${i}] : ${todo[i]}`);
+//         }
+//     }
+//     else if (userInput === 'delete' ) {
+//         todo.splice(parseInt(prompt('삭제할 index를 입력해 주세요.')), 1);
+//     }
+//     else if (userInput === 'quit') {
+//         break;
+//     }
+// } 
+
+// function great(Name, age) {
+//     console.log(`이름은 ${Name} 나이는 ${age}살`);
+// }
+
+// great('조현준', 24);
+
+// function repeat(str, numTimes) {
+//     let result = '';
+//     for (let i = 0; i < numTimes; i++ ) {
+//         result += str;
+//     }
+//     console.log(result);
+// }
+
+// repeat('ㅎㅇ', 3);
+
+// function add(Arg1, Arg2) {
+//     if (typeof Arg1 !== 'number' || typeof Arg2 !== 'number') {
+//         return false;
+//     }
+//     return Arg1 + Arg2;
+// }
+
+function capitalize(Arg) {
+    console.log(Arg.slice(0, 1));
+    console.log(Arg);
+}
+const a = 'sibal';
+capitalize(a);
+
+
