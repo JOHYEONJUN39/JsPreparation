@@ -468,13 +468,16 @@
 //     console.log('에러가 났습니다.');
 // }
 
-function shout(msg) {
-    try {
-        console.log(msg.toUpperCase().repeat(3));
-    }
-    catch(err) {
-        console.log(err);
-        console.log('shout에는 문자열을 넣어주세요.');
-    }
-}
-shout(1);
+// function shout(msg) {
+//     try {
+//         console.log(msg.toUpperCase().repeat(3));
+//     }
+//     catch(err) {
+//         console.log(err);
+//         console.log('shout에는 문자열을 넣어주세요.');
+//     }
+// }
+// shout(1);
+
+// --- 화살표 함수 ---
+

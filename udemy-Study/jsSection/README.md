@@ -142,3 +142,17 @@ function shout(msg) {
 }
 shout(1);
 ```
+
+# 화살표 함수
+
+## forEach 메서드
+- forEach() 메서드는 주어진 함수를 배열 요소 각각에 대해 실행합니다.
+
+- 매개변수
+- current
+  - Value 처리할 현재 요소.
+- index 
+  - 처리할 현재 요소의 인덱스.
+- array 
+  - forEach()를 호출한 배열.
+
