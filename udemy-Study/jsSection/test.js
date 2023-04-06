@@ -273,30 +273,52 @@
 //     }
 // }
 
-const testScores = {
-    ken: 80,
-    yuki: 67,
-    taro: 89,
-    ryota: 91,
-    yuko: 74,
-    chiaki: 96,
-    koki: 60,
-    saeko: 69,
-    kota: 99
-}
-
-// for (let x of testScores) {
-//     console.log(x);
+// const testScores = {
+//     ken: 80,
+//     yuki: 67,
+//     taro: 89,
+//     ryota: 91,
+//     yuko: 74,
+//     chiaki: 96,
+//     koki: 60,
+//     saeko: 69,
+//     kota: 99
 // }
-// 오류!
-// 오브젝트는 원래 열거가능한 요소가 아니라 for...of로 호출 불가능
 
-// Object.keys는 오브젝트의 키값을 배열로 만들어준다.
-console.log(Object.keys(testScores));
-// ['ken', 'yuki', 'taro', 'ryota', 'yuko', 'chiaki', 'koki', 'saeko', 'kota']
+// // for (let x of testScores) {
+// //     console.log(x);
+// // }
+// // 오류!
+// // 오브젝트는 원래 열거가능한 요소가 아니라 for...of로 호출 불가능
 
-// 배열로 바뀐 testScores의 길이만큼반복 , key값(지금은 이름)을 student에 저장
-for (let student of Object.keys(testScores)) {
-    // {이름}씨는 {데이터}(오브젝트 접근법을 사용)
-    console.log(`${student}씨는${testScores[student]}`);
-}
+// // Object.keys는 오브젝트의 키값을 배열로 만들어준다.
+// console.log(Object.keys(testScores));
+// // ['ken', 'yuki', 'taro', 'ryota', 'yuko', 'chiaki', 'koki', 'saeko', 'kota']
+
+// // 배열로 바뀐 testScores의 길이만큼반복 , key값(지금은 이름)을 student에 저장
+// for (let student of Object.keys(testScores)) {
+//     // {이름}씨는 {데이터}(오브젝트 접근법을 사용)
+//     console.log(`${student}씨는${testScores[student]}`);
+// }
+
+
+
+let quit = true;
+const todo = [];
+while(quit === true) {
+    let userInput = prompt('커맨드를 입력해주세요 유효 커맨드 : new, list, delete, quit')
+    if (userInput === 'new') {
+        todo.push(prompt('추가할 todo를 입력해 주세요.'));
+    }
+    else if (userInput === 'list') {
+        for (let i = 0; i < todo.length; i++ ) {
+            console.log(`[${i}] : ${todo[i]}`);
+        }
+    }
+    else if (userInput === 'delete' ) {
+        todo.splice(parseInt(prompt('삭제할 index를 입력해 주세요.')), 1);
+    }
+    else if (userInput === 'quit') {
+        break;
+    }
+} 
