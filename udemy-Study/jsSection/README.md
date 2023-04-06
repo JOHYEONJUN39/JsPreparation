@@ -107,3 +107,38 @@ cry2(); // 가 운다.
 ## try, catch
 - 에러가 발생하면 프로그램이 종료된다.
 - 프로그램이 종료되지않게 하기위해 try, catch로 예외처리를 해준다.
+
+```js
+function shout(msg) {
+    console.log(msg.toUpperCase().repeat(3));
+}
+shout(1); // 에러 발생 !!
+```
+
+```js
+function shout(msg) {
+    // try에서는 이 문장을 일단 실행시킨다 그리고 에러가 발생하면 catch로 넘어간다.
+    try {
+        console.log(msg.toUpperCase().repeat(3));
+    }
+    // try에서 오류발생시 catch를 실행한다.
+    catch {
+        console.log('shout에는 문자열을 넣어주세요.');
+    }
+}
+shout(1); // 'shout에는 문자열을 넣어주세요.'
+```
+- 무슨 에러가 발생했는지도 받을 수 있다.
+```js
+function shout(msg) {
+    try {
+        console.log(msg.toUpperCase().repeat(3));
+    }
+    // catch에 파라미터를 받는다. 파라미터에 에러가 저장됨.
+    catch(err) {
+        console.log(err);
+        console.log('shout에는 문자열을 넣어주세요.');
+    }
+}
+shout(1);
+```
