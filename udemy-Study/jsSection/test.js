@@ -346,11 +346,89 @@
 //     return Arg1 + Arg2;
 // }
 
-function capitalize(Arg) {
-    console.log(Arg.slice(0, 1));
-    console.log(Arg);
-}
-const a = 'sibal';
-capitalize(a);
+// function capitalize(Arg) {
+//     console.log(Arg.slice(0, 1));
+//     console.log(Arg);
+// }
+// const a = 'sibal';
+// capitalize(a);
 
+
+// function collect() {
+//     let total = 0;
+//     console.log(total);
+// }
+
+// const add = function (x, y) {
+//     return x + y;
+// }
+
+// console.log(add(1,2));
+
+
+
+
+// // 받은 함수를 2번 호출하는 함수
+// function callTwice(func) {
+//     func();
+//     func();
+// }
+// // 10번 호출
+// function callTenTimes(f) {
+//     for (let i = 0; i < 10; i ++) {
+//         f();
+//     }
+// }
+
+// function rollDie() {
+//     const roll = Math.floor(Math.random() * 6) + 1;
+//     console.log(roll);
+// }
+// // callTwice의 파라미터로 rollDie -> rollDie 5회 호출
+// callTwice(rollDie);
+// // callTenTimes의 파라미터로 rollDie -> rollDie 10회 호출
+// callTenTimes(rollDie);
+
+// function makeRandomFunc () {
+//     const rand = Math.random();
+//     if (rand > 0.5) {
+//         return function() {
+//             console.log('머고');
+//         }
+//     }
+//     else {
+//         return function() {
+//             console.log('시 발련들');
+//         }
+//     }
+// }
+
+// makeRandomFunc();
+
+// function makeBetweenFunc(min, max) {
+//     return function(num) {
+//         // 받은 num이 min 이상인지 그리고 max 이하인지 반환하는 함수
+//         return num >= min && num <= max;
+//     }
+// }
+// // isChild에 makeBetweenFunc(0, 18) 파리미터가 지정된 상태의 함수를 대입
+// const isChild = makeBetweenFunc(0, 18);
+// const isAdult = makeBetweenFunc(19, 64);
+// const isSenior = makeBetweenFunc(65, 120);
+
+// // makeBetweenFunc(0, 18)이 들어간 isChile에 num파라미터를 넣어 호출
+// isChild(20); // false
+// isAdult(40); // true
+// isSenior(100); // true
+
+const myMath = {
+    PI: 3.14,
+    // 오브젝트 데이터에 함수를 선언한다.
+    square(num) {
+        return num * num;
+    },
+    cube(num) {
+        return num ** 3;
+    }
+}
 
