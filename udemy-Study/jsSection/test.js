@@ -633,3 +633,68 @@
 // }, 2000);
 // clearInterval(id); // 정지
 // // clearTimeout()도 있다.
+
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+// numbers.filter((num) => {
+//     return num < 10;
+// }) 
+
+
+const movies = [ 
+    {
+        title: 'Amadeus',
+        score: 99,
+        year: 1984
+    },
+    
+    {
+        title: 'Stand By Me',
+        score: 85,
+        year: 2013
+    },
+    
+    {
+        title: 'Parasite',
+        score: 95,
+        year: 2004
+    },
+    
+    {
+        title: 'Alien',
+        score: 90,
+        year: 1995
+    },
+    {
+        title: 'Attack On titan',
+        score: 95,
+        year: 2015
+    }
+]
+
+// // 80점 이상인 영화 목록을 goodMovies에 저장
+// const goodMovies = movies.filter(movie => {
+//     return movie.score > 80;
+// })
+
+// console.log(goodMovies);
+// // 0 : {title: 'Amadeus', score: 99, year: 1984}
+// // 1 : {title: 'Stand By Me', score: 85, year: 2013}
+// // 2 : {title: 'Parasite', score: 95, year: 2004}
+// // 3 : {title: 'Alien', score: 90, year: 1995}
+// // 4 : {title: 'Attack On titan', score: 95, year: 2015}
+
+// const recentMovies = movies.filter((year) => {
+//     return year.year > 2000
+// })
+// console.log(recentMovies);
+
+
+// const goodMovies = movies
+//     .filter(movie =>movie.score > 80)
+//     .map(movie => movie.title);
+
+// console.log(goodMovies);
+
+
