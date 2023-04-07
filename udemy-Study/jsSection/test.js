@@ -482,7 +482,8 @@
 // --- 화살표 함수 ---
 
 
-const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+// const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
 
 
 // function print(element) {
@@ -491,7 +492,7 @@ const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 1
 
 // print(number[0]);
 // print(number[1]);
-// forEach는 함수를 받아서 그 함수를 배열의 요소 하나하나에 대입해준다.
+// // forEach는 함수를 받아서 그 함수를 배열의 요소 하나하나에 대입해준다.
 // number.forEach(function (element) {
 //     console.log(element);
 // });
@@ -500,32 +501,76 @@ const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 1
 //     console.log(elem);
 // }
 
-const movies = [ 
-    {
-        title: 'Amadeus',
-        score: 99
-    },
+// const movies = [ 
+//     {
+//         title: 'Amadeus',
+//         score: 99
+//     },
     
-    {
-        title: 'Stand By Me',
-        score: 85
-    },
+//     {
+//         title: 'Stand By Me',
+//         score: 85
+//     },
     
-    {
-        title: 'Parasite',
-        score: 95
-    },
+//     {
+//         title: 'Parasite',
+//         score: 95
+//     },
     
-    {
-        title: 'Alien',
-        score: 90
-    }
-]
+//     {
+//         title: 'Alien',
+//         score: 90
+//     }
+// ]
 
-// Amadeus = 99/100
-// forEach가 하나의 요소해대해 함수를 실행 함수내용은 아래와 같음
-movies.forEach(function(movie) {
-    console.log(`${movie.title} - ${movie.score}/100`)
-})
-// for...of 가 나온이후로는 위와같이는 잘 쓰지않는다. (String에서도 사용가능하기떄문에)
+// // Amadeus = 99/100
+// // forEach가 하나의 요소해대해 함수를 실행 함수내용은 아래와 같음
+// movies.forEach(function(movie) {
+//     console.log(`${movie.title} - ${movie.score}/100`)
+// })
+// // for...of 가 나온이후로는 위와같이는 잘 쓰지않는다. (String에서도 사용가능하기떄문에)
+
+
+// const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+// // 함수에 number의 요소가 하나하나 들어온다. 파라미터(num)
+// // map이 return하는건 number와 다른 완전히 새로운 배열이다.
+// const double = number.map(function(num) {
+//     return num * 2;
+// })
+
+// console.log(double);
+// // double = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
+// // number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+
+// const movies = [ 
+//     {
+//         title: 'Amadeus',
+//         score: 99
+//     },
+    
+//     {
+//         title: 'Stand By Me',
+//         score: 85
+//     },
+    
+//     {
+//         title: 'Parasite',
+//         score: 95
+//     },
+    
+//     {
+//         title: 'Alien',
+//         score: 90
+//     }
+// ]
+
+// const mvTitle = movies.map(function(movie) {
+//     return movie.title;
+// })
+
+// console.log(mvTitle);
+// // ['Amadeus', 'Stand By Me', 'Parasite', 'Alien']
+
 
