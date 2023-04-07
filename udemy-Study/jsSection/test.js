@@ -642,36 +642,36 @@
 // }) 
 
 
-const movies = [ 
-    {
-        title: 'Amadeus',
-        score: 99,
-        year: 1984
-    },
+// const movies = [ 
+//     {
+//         title: 'Amadeus',
+//         score: 99,
+//         year: 1984
+//     },
     
-    {
-        title: 'Stand By Me',
-        score: 85,
-        year: 2013
-    },
+//     {
+//         title: 'Stand By Me',
+//         score: 85,
+//         year: 2013
+//     },
     
-    {
-        title: 'Parasite',
-        score: 95,
-        year: 2004
-    },
+//     {
+//         title: 'Parasite',
+//         score: 95,
+//         year: 2004
+//     },
     
-    {
-        title: 'Alien',
-        score: 90,
-        year: 1995
-    },
-    {
-        title: 'Attack On titan',
-        score: 95,
-        year: 2015
-    }
-]
+//     {
+//         title: 'Alien',
+//         score: 90,
+//         year: 1995
+//     },
+//     {
+//         title: 'Attack On titan',
+//         score: 95,
+//         year: 2015
+//     }
+// ]
 
 // // 80점 이상인 영화 목록을 goodMovies에 저장
 // const goodMovies = movies.filter(movie => {
@@ -696,5 +696,192 @@ const movies = [
 //     .map(movie => movie.title);
 
 // console.log(goodMovies);
+
+
+// const exams = [80, 98, 92, 89, 72, 83, 81, 66, 62]
+
+// const test = exams.every(exam => exam >= 75);
+// console.log(test); // false
+
+// const movies = [ 
+//     {
+//         title: 'Amadeus',
+//         score: 99,
+//         year: 1984
+//     },
+    
+//     {
+//         title: 'Stand By Me',
+//         score: 85,
+//         year: 2013
+//     },
+    
+//     {
+//         title: 'Parasite',
+//         score: 95,
+//         year: 2004
+//     },
+    
+//     {
+//         title: 'Alien',
+//         score: 90,
+//         year: 1995
+//     },
+//     {
+//         title: 'Attack On titan',
+//         score: 95,
+//         year: 2015
+//     }
+// ]
+
+// // 2015이상인 영화가 하나라도 있으면 true를 반환!
+// const newMovie = movies.some(movie => movie.year >= 2015);
+// console.log(newMovie);
+
+
+// const goodMovies = movies
+//     .filter(movie =>movie.score > 80)
+//     .map(movie => movie.title);
+
+
+// const validUserNames = arr => {
+//     // arr = ['tanaka', 'suzuki1979', 'q29832128238983', 'hogemoge', 'kimetsu']
+    
+//     arr.filter((num) => {
+//         console.log(num.length);
+//         return num.length < 10;
+//     })
+// }
+
+
+// const a = ['tanaka', 'suzuki1979', 'q29832128238983', 'hogemoge', 'kimetsu']
+
+// console.log(validUserNames(a));
+
+
+// // 함수이름          매개변수(배열을 받을)
+// const validUserNames = arr => {
+//     // arr = ['tanaka', 'suzuki1979', 'q29832128238983', 'hogemoge', 'kimetsu']
+//     // 반환해줄 배열 변수
+//     let answer = [];
+//     // 변수 = 받은 배열.filter((매개변수) => {})
+//     // filter는 나열요소에서 하나씩 매개변수에 뽑아온다.
+//     answer = arr.filter((num) => {
+//         // 뽑아온 요소의 길이를 비교
+//         return num.length < 10;
+//     });
+//     // filter를 사용해 새로 만들어진 배열을 반환.
+//     return answer;
+// }
+
+
+// const prices = [980, 1500, 1980, 4980, 2980];
+// // // 12420
+// // let total = 0;
+// // for (let price of prices) {
+// //     total += price;
+// // }
+
+// // console.log(total);
+
+// // 12420
+// const total = prices.reduce((total, price) => {
+//     return total + price;
+// })
+// console.log(total);
+
+// const minPrice = prices.reduce((min, price) => {
+//     if (min > price) {
+//         return price;
+//     }
+//     return min;
+// })
+
+// console.log(minPrice);
+
+
+
+// const movies = [ 
+//     {
+//         title: 'Amadeus',
+//         score: 99,
+//         year: 1984
+//     },
+    
+//     {
+//         title: 'Stand By Me',
+//         score: 85,
+//         year: 2013
+//     },
+    
+//     {
+//         title: 'Parasite',
+//         score: 92,
+//         year: 2004
+//     },
+    
+//     {
+//         title: 'Alien',
+//         score: 90,
+//         year: 1995
+//     },
+//     {
+//         title: 'Attack On titan',
+//         score: 100,
+//         year: 2015
+//     }
+// ]
+
+// const bestMovie = movies.reduce((maxScore, movie) => {
+//     if (maxScore.score < movie.score){
+//         return movie;
+//     }
+//     return maxScore;
+// })
+
+// console.log(bestMovie);
+
+// const evens = [2, 4, 6, 8];
+
+// const sum = evens.reduce((sum, num) => sum + num, 50);
+
+// console.log(sum);
+
+
+// const person = {
+//     firstName: 'taro',
+//     lastName: 'yamada',
+//     fullName: function() {
+//         return `${this.lastName} ${this.firstName}`
+//     }
+// }
+
+// console.log(person.fullName());
+
+
+// window
+console.log(this);
+
+// 화살표 함수는 자신이 정의된 주변의 scope에 있는 this가 된다. (아래의 경우 person의 밖)
+const person = {
+    firstName: 'taro',
+    lastName: 'yamada',
+    fullName: function() {
+        return `${this.lastName} ${this.firstName}`
+    },
+    delayName: function() {
+        // 2초 딜레이를 주고 fullName 함수를 호출
+        // setTimeout(function() {
+        //     console.log(this.fullName())
+        // },2000); 에러!! 이 코드에서 this가 가리키는건 window
+
+        setTimeout( () => {
+            console.log(this.fullName())
+        },2000);
+        // 화살표 함수는 주변의 scope에 있는 this를 가리켜 이 경우엔 fullName함수가 된다.
+    }
+}
+
+console.log(person.delayName()); // yamada taro
 
 

@@ -262,3 +262,170 @@ console.log(goodMovies);
 // ['Amadeus', 'Stand By Me', 'Parasite', 'Alien', 'Attack On titan']
 ```
 
+## every와 some
+- map과는 다르게 boolean을 반환한다.
+- every : 모든 요소가 callback함수를 만족하면 true를 반환.
+```js
+const exams = [80, 98, 92, 89, 72, 83, 81, 66, 62]
+
+const test = exams.every(exam => exam >= 75);
+console.log(test); // false
+```
+- some : 요소중에서 하나라도 callback함수를 만족하면 true를 반환.
+```js
+const movies = [ 
+    {
+        title: 'Amadeus',
+        score: 99,
+        year: 1984
+    },
+    
+    {
+        title: 'Stand By Me',
+        score: 85,
+        year: 2013
+    },
+    
+    {
+        title: 'Parasite',
+        score: 95,
+        year: 2004
+    },
+    
+    {
+        title: 'Alien',
+        score: 90,
+        year: 1995
+    },
+    {
+        title: 'Attack On titan',
+        score: 95,
+        year: 2015
+    }
+]
+
+// 2015이상인 영화가 **하나라도 있으면** true를 반환!
+const newMovie = movies.some(movie => movie.year >= 2015);
+console.log(newMovie); // true
+```
+
+## reduce 메서드
+
+```js
+const prices = [980, 1500, 1980, 4980, 2980];
+// // 12420
+let total = 0;
+for (let price of prices) {
+    total += price;
+}
+
+console.log(total);
+
+// 12420
+const total = prices.reduce((total, price) => {
+    return total + price;
+})
+console.log(total);
+
+const minPrice = prices.reduce((min, price) => {
+    if (min > price) {
+        return price;
+    }
+    return min;
+})
+
+console.log(minPrice);
+```
+
+```js
+const movies = [ 
+    {
+        title: 'Amadeus',
+        score: 99,
+        year: 1984
+    },
+    
+    {
+        title: 'Stand By Me',
+        score: 85,
+        year: 2013
+    },
+    
+    {
+        title: 'Parasite',
+        score: 92,
+        year: 2004
+    },
+    
+    {
+        title: 'Alien',
+        score: 90,
+        year: 1995
+    },
+    {
+        title: 'Attack On titan',
+        score: 100,
+        year: 2015
+    }
+]
+
+const bestMovie = movies.reduce((maxScore, movie) => {
+    if (maxScore.score < movie.score){
+        return movie;
+    }
+    return maxScore;
+})
+
+console.log(bestMovie);
+```
+
+```js
+const evens = [2, 4, 6, 8];
+// call back함수 뒤에 들어가는 파라미터는 (초기값)이다 
+const sum = evens.reduce((sum, num) => sum + num, 50);
+
+console.log(sum); // 70
+```
+
+
+## 화살표 함수의 this
+- 화살표 함수는 자신이 정의된 주변의 scope에 있는 this가 된다. (바깥은 window)
+```js
+const person = {
+    firstName: 'taro',
+    lastName: 'yamada',
+    fullName: function() {
+        return `${this.lastName} ${this.firstName}`
+    }
+}
+console.log(person.fullName()); // yamada taro
+```
+
+```js
+// window
+console.log(this);
+
+// 화살표 함수는 자신이 정의된 주변의 scope에 있는 this가 된다. (아래의 경우 person의 밖)
+const person = {
+    firstName: 'taro',
+    lastName: 'yamada',
+    fullName: function() {
+        return `${this.lastName} ${this.firstName}`
+    },
+    // 2초 딜레이를 주고 fullName 함수를 호출
+    delayName: function() {
+        // !! 에러 !!
+        // setTimeout(function() {
+        //     console.log(this.fullName())
+        // },2000); 
+        // 에러!! 이 코드에서 this가 가리키는건 window
+
+        setTimeout( () => {
+            console.log(this.fullName())
+        },2000);
+        // 화살표 함수는 주변의 scope에 있는 this를 가리켜 이 경우엔 fullName함수가 된다.
+    }
+}
+
+console.log(person.delayName()); // yamada taro
+```
