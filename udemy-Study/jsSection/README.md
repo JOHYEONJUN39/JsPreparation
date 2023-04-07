@@ -1,5 +1,3 @@
-# 화살표 함수
-
 ## forEach 메서드
 - forEach() 메서드는 주어진 함수를 배열 요소 각각에 대해 실행합니다.
 
@@ -108,4 +106,85 @@ const mvTitle = movies.map(function(movie) {
 
 console.log(mvTitle);
 // ['Amadeus', 'Stand By Me', 'Parasite', 'Alien']
+```
+
+## 화살표 함수
+- 인터넷 익스플로러에서 사용 불가
+
+```js
+일반적인 함수 식
+const add = function(x, y) {
+    return x + y;
+}
+
+화살표 함수를 사용
+const add = (x, y) => {
+    return x + y;
+}
+
+const square = (num) => {
+    return num ** 3;
+}
+console.log(square(2)); // 8
+```
+
+```js
+파라미터가 없는 경우에도 명시적으로 ()를 붙혀줘야함
+const rollDie = () => {
+    return Math.floor(Math.random() * 10) + 1; 
+}
+
+파라미터가 하나인 경우는 괄호를 생략하고 파라미터 이름만 적어줘도된다!.
+const square = num => {
+    return num ** 3;
+}
+```
+
+### 암묵적인 리턴
+
+```js
+암묵적인 리턴으로 아래와같이 더 생략해서 적을 수 있다.
+()를 이용하면 하나의 값만 돌아온다.
+const rollDie = () => (
+    Math.floor(Math.random() * 10) + 1
+)
+여기서 더! 더! 생략을 하면 ()자체를 없애버릴 수 있다!!
+그러면 아래와같이 파격적인 길이가 나온다..
+const add = (x, y) => x + y;
+```
+**하지만 이러한 생략형은 회사의 판단, 혹은 적재적소에서 사용할때 유효하다..(전부 생략한다고 좋은게 아님)**  
+**암묵적인 리턴은 하나밖에 식이 없다. (평가하는 것) 아래는 쓰래기코드**
+```js
+const rollDie = () => (
+    Math.floor(Math.random() * 10) + 1;
+    x + y;
+)
+// <!-- 불가능!!!! -->
+```
+
+## setTimeout과 setInterval
+- setTimeout, setInterval도 call back 함수다.
+
+```js
+// setTimeout(함수, 얼마나 기다리는지)
+setTimeout(() => {
+    console.log('야호~~');
+}, 3000);
+// 3초기다리고 야호~ 출력
+
+setInterval(함수, 몇초마다 실행하는지)
+setInterval(() => {
+    console.log(Math.random());
+}, 2000);
+```
+
+```js
+// setInterval을 멈추는 메서드 clearInterval()
+// setInterval은 실행될때 ID를 발행한다.
+// clearInterval은 setInterval의 ID를 이용해 특정 setInterval을 정지시킨다.
+const id = setInterval(() => {
+    console.log(Math.random());
+}, 2000);
+clearInterval(id); // 정지
+// clearTimeout()도 있다.
 ```
