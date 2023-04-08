@@ -133,3 +133,56 @@ const user = formData;
 const newUser = {...formData, id: 123, fiVerified: false}
 // formData를 직접 수정하는 것이 아닌 스프레드로 나열을 해주면된다.
 ```
+
+
+## arguments 오브젝트
+- 화살표 함수이외의 모든 함수에 쓸 수 있는 오브젝트
+- 배열과 유사한 오브젝트
+- 함수에게 받은 인수가 모두 들어있다.
+
+```js
+function sum() {
+    console.log(arguments); // 0: 1   1: 2   2: 3
+}
+```
+
+```js
+function sum() {
+    return arguments.reduce((total, num) => total + num);
+}
+console.log(sum(1, 2, 3));
+// 오류! arguments에 배열과 유사하게 인수가 들어있지만 배열이 아니기때문에 reduce를 사용할 수 없다.
+```
+## 나머지 매개변수(残余引数)
+
+```js
+// ...파라미터는 파라미터를 배열로 변환해준다.
+function sum(...nums) {
+    console.log(nums);
+}
+console.log(sum(1, 2, 3)); // [1, 2, 3]
+```
+
+```js
+// argument가 아닌 ...nums로 배열로 변환을 하면 reduce를 사용할 수 있게된다.
+function sum(...nums) {
+    return nums.reduce((total, num) => total + num);
+}
+console.log(sum(1, 2, 3)); // 6
+```
+
+**나머지 파라미터를 활용**
+```js
+function raceResults(gold, silver, ...rest) {
+    console.log(`금 : ${gold}`);
+    console.log(`은 : ${silver}`);
+    console.log(`그 외 : ${rest}`);
+}
+
+raceResults('황금', '은장', '동메달', '에메랄드');
+```
+**결과**
+- 금 : 황금
+- 은 : 은장
+- 그 외 : 동메달,에메랄드
+

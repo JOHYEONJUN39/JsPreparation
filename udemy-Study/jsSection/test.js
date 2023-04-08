@@ -974,25 +974,44 @@
 // const str = {...'Hello'};
 // console.log(str); // {0: 'H', 1: 'e', 2: 'l', 3: 'l', 4: 'o'}
 
-// 자바스크립트에서 스프레드는 어떨때 사용할까?
-// 자바스크립트에서 오브젝트를 복사하는 일은 정말 많다.
+// // 자바스크립트에서 스프레드는 어떨때 사용할까?
+// // 자바스크립트에서 오브젝트를 복사하는 일은 정말 많다.
 
-// 웹 사이트에서 form으로 등록했을때 들어있는 정보라고 친다.
-// 만약 이 정보를 서버에서 user로 보존하고싶을때를 가정해본다.
-const formData = {
-    email: 'lhslhs301@gmail.com',
-    password: 'secret',
-    username: 'JHJ'
+// // 웹 사이트에서 form으로 등록했을때 들어있는 정보라고 친다.
+// // 만약 이 정보를 서버에서 user로 보존하고싶을때를 가정해본다.
+// const formData = {
+//     email: 'lhslhs301@gmail.com',
+//     password: 'secret',
+//     username: 'JHJ'
+// }
+// // 추가로 정보를 더하고 싶다.
+// // formData.id = 123;
+// // formData.isVerified = false;
+
+// // const user = formData;
+// // 이런식이면 user가 정보를 잘못입력해 formData를 다시 가져오라 하면
+// // id등등 추가정보가 입력된 상태의 formData를 돌려줘서 곤란하다.
+
+// // 스프레드를 이용하면?
+// const newUser = {...formData, id: 123, fiVerified: false}
+// // formData를 직접 수정하는 것이 아닌 스프레드로 나열을 해주면된다.
+
+// ...nums를 파라미터로 지정하면 배열로 변환해준다.
+// function sum(...nums) {
+//     console.log(nums);
+// }
+
+// console.log(sum(1, 2, 3)); // [1, 2, 3]
+
+function sum(...nums) {
+    return nums.reduce((total, num) => total + num);
 }
-// 추가로 정보를 더하고 싶다.
-// formData.id = 123;
-// formData.isVerified = false;
+console.log(sum(1, 2, 3)); // 6
 
-// const user = formData;
-// 이런식이면 user가 정보를 잘못입력해 formData를 다시 가져오라 하면
-// id등등 추가정보가 입력된 상태의 formData를 돌려줘서 곤란하다.
 
-// 스프레드를 이용하면?
-const newUser = {...formData, id: 123, fiVerified: false}
-// formData를 직접 수정하는 것이 아닌 스프레드로 나열을 해주면된다.
-
+function raceResults(gold, silver, ...rest) {
+    console.log(`금 : ${gold}`);
+    console.log(`은 : ${silver}`);
+    console.log(`그 외 : ${rest}`);
+}
+raceResults('황금', '은장', '동메달', '에메랄드');
