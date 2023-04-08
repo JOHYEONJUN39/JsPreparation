@@ -1003,15 +1003,65 @@
 
 // console.log(sum(1, 2, 3)); // [1, 2, 3]
 
-function sum(...nums) {
-    return nums.reduce((total, num) => total + num);
-}
-console.log(sum(1, 2, 3)); // 6
+// function sum(...nums) {
+//     return nums.reduce((total, num) => total + num);
+// }
+// console.log(sum(1, 2, 3)); // 6
 
 
-function raceResults(gold, silver, ...rest) {
-    console.log(`금 : ${gold}`);
-    console.log(`은 : ${silver}`);
-    console.log(`그 외 : ${rest}`);
+// function raceResults(gold, silver, ...rest) {
+//     console.log(`금 : ${gold}`);
+//     console.log(`은 : ${silver}`);
+//     console.log(`그 외 : ${rest}`);
+// }
+// raceResults('황금', '은장', '동메달', '에메랄드');
+
+
+// const scores = [923922, 545341, 217744, 477245, 543354, 123584];
+
+// // 변수에 배열의 값을 넣으려면 하나하나 선언해서 하나하나 대입해줘야한다
+// const firstScore = scores[0];
+// const secondScore = scores[1];
+
+// // 분할대입을 사용하면????
+// const [ gold, silver, ...rest] = scores;
+// // scores배열의 [0]번 요소가 gold에 [1]번 요소가 silver에 대입된다. (코드가 굉장히 나이스해짐)
+// // 이전에 배운 나머지 매개변수를 이용하면 마지막 변수의 뒷요소가 출력된다 (위 문장에서는 [2])
+
+
+const user = {
+    email: 'lhslhs301@gmail.com',
+    password: 'abcdefg!!',
+    firstName: 'Jo',
+    lastName: 'HyeonJun',
+    born: 2000,
+    city: 'deagu',
+    state: 'Republic of Korea'
 }
-raceResults('황금', '은장', '동메달', '에메랄드');
+
+// const firstName = user.firstName;
+// const lastName = user.lastName;
+
+// const { firstName, lastName, email } = user;
+
+// const { born: birthYear } = user;
+
+const user2 = {
+    email: 'l8124@daum.net',
+    firstName: 'fukuyama',
+    lastName: 'kyouko',
+    born: 2002,
+    state: 'Japan'
+}
+
+// password는 user2에게 없다 password변수를 확인해보면 undefined
+// const {firstName, lastName, password} = user2;
+
+// default값을 줘서 해결 가능!
+// const {firstName, lastName, password = 'N/A'} = user2;
+
+// password에 default로 'N/A'를 정의했지만
+const { born: birthYear, password = 'N/A' } = user;
+
+// user는 password를 가지고있기때문에 원래 가지고있던 데이터가 password변수에 대입되었다.
+console.log(password); // abcdefg!!
