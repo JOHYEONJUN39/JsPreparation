@@ -1,188 +1,201 @@
-## default 인수
-- 함수를 사용할 때 파라미터가 없을 때 default값을 넣을 수 있다.
+## 함수의 파라미터 (분할대입)
 
 ```js
-주사위의 면이 몇개인지 받는 파라미터
-function rollDie(numSides) {
-    return Math.floor(Math.random() * numSides) + 1
-}
-파라미터를 지정해주지 않으면 undefined가 되어버린다.
-function rollDie() {
-    return Math.floor(Math.random() * numSides) + 1
-}
-```
-
-**과거에는 이런 방법을 사용했다.**
-```js
-function multiply(a, b) {
-    // 파라미터 b의 타입이 'undefined'가 아닐 겅우 b(받은 값)을 반환
-    // 파라미터 b의 타입이 'undefined'일 겅우 1을 반환
-    b = typeof b !== 'undefined' ? b : 1;   
-    return a * b;
-}
-```
-
-**현재는 이렇게 좋은 방법을 사용한다 보이는 그대로다.**
-```js
-function rollDie(numSides = 6) {
-    return Math.floor(Math.random() * numSides) + 1
-}
-```
-
-**아래와 같이 default파라미터를 넣었지만 msg에 인수가 들어가버리기 떄문에**  
-**파라미터를 정의하는 순서 역시 중요하다 (전부다 짜고 정한다)**
-```js
-function greet(msg = '야호~', person) {
-    console.log(`${msg} ${person}씨`)
-}
-console.log(greet('현준')) // 야호~ undefined씨
-```
-**정상적인 순서**
-```js
-function greet(person, msg = '야호~'){
-    console.log(`${msg} ${person}씨`)
-}
-console.log(greet('현준')) // 야호~ 현준씨
-```
-
-## 전개 구문
-- 나열 가능한 인수에 전개하는것이 가능하다.
-
-```js
-const nums = [13, 4, 5, 13, 2, 3, 7, 1, 2000];
-console.log(Math.max(nums)) // NaN ! number가 아닌 배열을 계산하려 했기떄문
-
-// 여기에 전개 구문을 응용하면
-console.log(Math.max(...nums)) // 2000
-// nums의 내용물은 변하지 않는다.
-
-// 아래 두 문장은 결과가 같다.
-console.log(13, 4, 5, 13, 2, 3, 7, 1, 2000); // 13 4 5 13 2 3 7 1 2000
-console.log(...nums);                        // 13 4 5 13 2 3 7 1 2000
-```
-**[]가 없어진다고 생각하면 편할지도?**  
-
-### 배열의 전개 구문
-
-```js
-const cats = ['Tama', 'Tora', 'Momo'];
-const dogs = ['Hachi', 'Pochi'];
-
-// 위 두 배열을 합치려면 지금까지는 concat()을 이용하였다.
-console.log(cats.concat(dogs)); // ['Tama', 'Tora', 'Momo', 'Hachi', 'Pochi']
-
-// 스프레드 구문을 사용하면 아래와 같다.
-const allPets = [...cats, ...dogs]; 
-console.log(allPets); // ['Tama', 'Tora', 'Momo', 'Hachi', 'Pochi']
-
-// 하지만 이러면 concat()과 하는일이 같다. 아래에서 다른 예를 보자
-console.log([...cats, 'Sakura', ...dogs]);
-// ['Tama', 'Tora', 'Momo', 'Sakura', 'Hachi', 'Pochi']
-// 이런식으로 간단하게 사이에 다른 요소를 추가하는것도 가능하다!!
-```
-
-### 오브젝트의 전개 구문(스프레드)
-
-```js
-const feline = {leg: 4, family: '猫'};
-const canine = {family: '犬', bark: true};
-// 스프레드를 사용하면 복제된다.
-const all = {...feline, color: 'grey'};
-console.log(all); // {leg: 4, family: '猫', color: 'grey'}
-
-// 스프레드를 사용해 두개의 오브젝트를 불러와 보았다.
-const catDog = {...feline, ...canine};
-console.log(catDog); // {leg: 4, family: '犬', bark: true}
-// 위와같이 결과를 얻었지만 중복되는 키는 나중에 정의된것이 출력된다.
-
-// 반대로 해보면
-const catDog = {...canine, ...feline};
-console.log(catDog); // {family: '猫', bark: true, leg: 4}
-```
-
-```js
-// 오브젝트에 배열을 넣어 스프레드를 사용하면 어떻게될까?
-const num = {...[2, 4, 6, 8]};
-console.log(num); // {0: 2, 1: 4, 2: 6, 3: 8}
-// 배열마냥 index와 값이 같이 나온다 이건 문자열의 경우도 같다
-const str = {...'Hello'};
-console.log(str); // {0: 'H', 1: 'e', 2: 'l', 3: 'l', 4: 'o'}
-```
-
-**자바스크립트에서 스프레드는 어떨때 사용할까?**
-**자바스크립트에서 오브젝트를 복사하는 일은 정말 많다.**
-```js
-// 웹 사이트에서 form으로 등록했을때 들어있는 정보라고 친다.
-// 만약 이 정보를 서버에서 user로 보존하고싶을때를 가정해본다.
-const formData = {
+const user = {
     email: 'lhslhs301@gmail.com',
-    password: 'secret',
-    username: 'JHJ'
+    password: 'abcdefg!!',
+    firstName: 'Jo',
+    lastName: 'HyeonJun',
+    born: 2000,
+    city: 'deagu',
+    state: 'Republic of Korea'
 }
-// 추가로 정보를 더하고 싶다.
-formData.id = 123;
-formData.isVerified = false;
-
-const user = formData;
-// 이런식이면 user가 정보를 잘못입력해 formData를 다시 가져오라 하면
-// id등등 추가정보가 입력된 상태의 formData를 돌려줘서 곤란하다.
-```
-
-**스프레드를 이용하면?**
-```js
-const newUser = {...formData, id: 123, fiVerified: false}
-// formData를 직접 수정하는 것이 아닌 스프레드로 나열을 해주면된다.
-```
-
-
-## arguments 오브젝트
-- 화살표 함수이외의 모든 함수에 쓸 수 있는 오브젝트
-- 배열과 유사한 오브젝트
-- 함수에게 받은 인수가 모두 들어있다.
-
-```js
-function sum() {
-    console.log(arguments); // 0: 1   1: 2   2: 3
+// 분할대입을 사용하지 않음
+function fullName(user) {
+    return `${user.firstName} ${user.lastName}`;
 }
+console.log(fullName(user)); // Jo HyeonJun
+
+// 분할대입을 사용
+function fullName(user) {
+    const {firstName, lastName} = user;
+    return `${firstName} ${lastName}`;
+}
+console.log(fullName(user)); // Jo HyeonJun
+
+파라미터에 분할대입을 할 수있다.(default도 설정가능)
+function fullName({firstName, lastName}) {
+    return `${firstName} ${lastName}`;
+}
+console.log(fullName(user)); // Jo HyeonJun
 ```
 
 ```js
-function sum() {
-    return arguments.reduce((total, num) => total + num);
-}
-console.log(sum(1, 2, 3));
-// 오류! arguments에 배열과 유사하게 인수가 들어있지만 배열이 아니기때문에 reduce를 사용할 수 없다.
+const movies = [ 
+    {
+        title: 'Amadeus',
+        score: 99,
+        year: 1984
+    },
+    
+    {
+        title: 'Stand By Me',
+        score: 85,
+        year: 2013
+    },
+    
+    {
+        title: 'Parasite',
+        score: 92,
+        year: 2004
+    },
+    
+    {
+        title: 'Alien',
+        score: 90,
+        year: 1995
+    },
+    {
+        title: 'Attack On titan',
+        score: 100,
+        year: 2015
+    }
+]
+// 분할대입을 사용하지않은 구문
+movies.filter(movie => movies.score >= 90);
+// 분할대입을 사용한 구문 score를 직접 가져오기에 movies.이 필요없다.
+movies.filter(({score}) => score >= 90);
+// 0: {title: 'Amadeus', score: 99, year: 1984}
+// 1: {title: 'Parasite', score: 92, year: 2004}
+// 2: {title: 'Alien', score: 90, year: 1995}
+// 3: {title: 'Attack On titan', score: 100, year: 2015}
+
+// 분할대입을 사용하지않은 구문
+movies.map(movie => {
+    return `${movie.title}(${movie.year}): ${movie.score}/100`;
+})
+// 분할대입을 사용한 구문
+movies.map(({title, year, score}) => {
+    return `${title}(${year}): ${score}/100`;
+})
 ```
-## 나머지 매개변수(残余引数)
+
+## DOM 입문
+- Document Object Model
+- 웹 페이지를 나타내는 자바스크립트의 모음
+- CSS의 선택자와 유사하다 (특정 요소를 선택해서 프로퍼티를 준다는 점)
+
+### getElementById
+- 대상으로 할 요소의 html Id를 선택
+- 기본 형태
+  - const 변수 = document.getElementById('Id');
+
+### getElementsByTagName, getElementsByClassName
+- Elements (해당되는 모든 요소를 선택한다)
+- TagName은 태그의 이름, ClassName은 클래스 이름
+- 변수에 담은 요소는 배열로 보이지만 배열이 아니다 map같은 함수는 사용불가능
+- 대신 length는 있다!
+**img태그를 가진 모든 요소를 선택**
+```js
+const allImages = document.getElementsByTagName('img');
+// allImages의 length만큼 반복하여 각img의 src(주소)를 출력
+for (let img of allImages) {
+    console.log(img.src);
+}
+```
+**클래스이름이 square인 모든 요소를 선택**
+```js
+const squareImages = document.getElementsByClassName('square');
+// squareImages의 length만큼 반복하여 각 img의 src를 임의의 이미지로 변경 (이럴경우 모든 요소가 같은 이미지로 변함)
+for (let img of squareImages) {
+    img.src = 'https://images.unsplash.com/photo-1563281577-a7be47e20db9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80';
+}
+```
+
+### querySelector
+- 비교적 최근 등장
+- 편리하게 요소를 선택할 수 있다.
+- 처음 발견한 하나를 선택
+- 기본형태
+  - document.querySelector('div , .square, #banner, img:nth-of-type(3), a[title="ヒツジ"]');
+  - 순서대로 tag, class, id, 가상요소, a태그의title
+
+### querySelectorAll
+- 모든 요소를 선택하는 querySelector
+
+**p태그의 형제요소 a를 모두 선택**
+```js
+const links = document.querySelectorAll('p a');
+// 각 요소의 href를 출력
+for (let link of links) {
+    console.log(link.href);
+}
+```
+### innerHTML, textContent, innerText
+- textContent는 모든 요소의(숨겨진) 내용을 습득해서 표시한다.
+- innerText는 페이지에서 보이는 내용을 습득해서 표시한다.
+```js
+const allLinks = document.querySelectorAll('a');
+
+for (let link of allLinks) {
+    link.innerText = '나는 링크다!!!!!';
+}
+```
+```html
+<p>
+    ニワトリという和名は「<a href="/wiki/%E5%BA%AD" title="庭">나는 링크다!!!!!</a>に飼う鳥」、
+    つまり家禽という意味から名づけられた<sup id="cite_ref-Sankaido_1-0" class="reference"><a href="#cite_note-Sankaido-1">나는 링크다!!!!!</a></sup>。ニワトリは普通「鶏」と書かれるが、「家鶏」で「にわとり」と充てることもある<sup id="cite_ref-Nandoku_2-0" class="reference"><a href="#cite_note-Nandoku-2">나는 링크다!!!!!</a></sup>。ニワトリは古くは<b>カケ</b>（鶏）と呼ばれた<sup id="cite_ref-Nandoku_2-1" class="reference"><a href="#cite_note-Nandoku-2">나는 링크다!!!!!</a></sup>。代表的な鳥であるため、単に「とり」ともよばれる<sup id="cite_ref-Shincho_3-0" class="reference"><a href="#cite_note-Shincho-3">나는 링크다!!!!!</a></sup>。雄のニワトリは「<b>雄鶏</b>（牡鶏）」（<b>おんどり</b>）、雌のニワトリは「<b>雌鶏</b>（牝鶏）」（めんどり）と呼ばれる<sup id="cite_ref-Nandoku_2-2" class="reference"><a href="#cite_note-Nandoku-2">나는 링크다!!!!!</a></sup><sup id="cite_ref-Shincho_3-1" class="reference"><a href="#cite_note-Shincho-3">나는 링크다!!!!!</a></sup>。
+  </p>
+```
+어디까지나 보이는 것이 바뀌었을뿐 링크가 바뀌거나 하진않았다.
+
+- innerHTML은 html을 포함해서 습득한다.
+```js
+document.querySelector('h1').innerText
+// ABCD
+```
+```js
+document.querySelector('h1').innerHTML
+// <h1>ABCD</h1>
+```
+
+### 속성을 조작하는 getAttribute setAttribute
+- getAttribute : 속성의 값을 가져오는 것이 가능하다.
+```js
+const firstLink = document.querySelector('a');
+
+firstLink.getAttribute('href')
+// '/wiki/%E5%BA%AD'
+firstLink.getAttribute('title')
+// '庭'
+```
+
+- setAttribute : 속성의 값을 바꾸는 것이 가능하다.
+```js
+const firstLink = document.querySelector('a');
+
+// 첫번째 a태그의 링크(href)를 google로 변경
+firstLink.setAttribute('href', 'https://google.com')
+```
 
 ```js
-// ...파라미터는 파라미터를 배열로 변환해준다.
-function sum(...nums) {
-    console.log(nums);
-}
-console.log(sum(1, 2, 3)); // [1, 2, 3]
+// 특정 요소를 가져오는 방법
+
+// 모든 input요소중 index가 [1]인 요소 선택
+document.querySelectorAll('input')[1]
+// 하나의 input요소를 선택 근데이제 type이 text인
+document.querySelector('input[type=text]')
+
+// 속성을 변경해보자
+const input = document.querySelector('input[type=text]')
+input.type
+// 'text'
+
+input.type = 'password';
+// 'password'
+
+input.setAttribute('type', 'text');
+// 'text'
 ```
 
-```js
-// argument가 아닌 ...nums로 배열로 변환을 하면 reduce를 사용할 수 있게된다.
-function sum(...nums) {
-    return nums.reduce((total, num) => total + num);
-}
-console.log(sum(1, 2, 3)); // 6
-```
-
-**나머지 파라미터를 활용**
-```js
-function raceResults(gold, silver, ...rest) {
-    console.log(`금 : ${gold}`);
-    console.log(`은 : ${silver}`);
-    console.log(`그 외 : ${rest}`);
-}
-
-raceResults('황금', '은장', '동메달', '에메랄드');
-```
-**결과**
-- 금 : 황금
-- 은 : 은장
-- 그 외 : 동메달,에메랄드
 

@@ -1029,39 +1029,119 @@
 // // 이전에 배운 나머지 매개변수를 이용하면 마지막 변수의 뒷요소가 출력된다 (위 문장에서는 [2])
 
 
-const user = {
-    email: 'lhslhs301@gmail.com',
-    password: 'abcdefg!!',
-    firstName: 'Jo',
-    lastName: 'HyeonJun',
-    born: 2000,
-    city: 'deagu',
-    state: 'Republic of Korea'
-}
+// const user = {
+//     email: 'lhslhs301@gmail.com',
+//     password: 'abcdefg!!',
+//     firstName: 'Jo',
+//     lastName: 'HyeonJun',
+//     born: 2000,
+//     city: 'deagu',
+//     state: 'Republic of Korea'
+// }
 
-// const firstName = user.firstName;
-// const lastName = user.lastName;
+// // const firstName = user.firstName;
+// // const lastName = user.lastName;
 
-// const { firstName, lastName, email } = user;
+// // const { firstName, lastName, email } = user;
 
-// const { born: birthYear } = user;
+// // const { born: birthYear } = user;
 
-const user2 = {
-    email: 'l8124@daum.net',
-    firstName: 'fukuyama',
-    lastName: 'kyouko',
-    born: 2002,
-    state: 'Japan'
-}
+// const user2 = {
+//     email: 'l8124@daum.net',
+//     firstName: 'fukuyama',
+//     lastName: 'kyouko',
+//     born: 2002,
+//     state: 'Japan'
+// }
 
-// password는 user2에게 없다 password변수를 확인해보면 undefined
-// const {firstName, lastName, password} = user2;
+// // password는 user2에게 없다 password변수를 확인해보면 undefined
+// // const {firstName, lastName, password} = user2;
 
-// default값을 줘서 해결 가능!
-// const {firstName, lastName, password = 'N/A'} = user2;
+// // default값을 줘서 해결 가능!
+// // const {firstName, lastName, password = 'N/A'} = user2;
 
-// password에 default로 'N/A'를 정의했지만
-const { born: birthYear, password = 'N/A' } = user;
+// // password에 default로 'N/A'를 정의했지만
+// const { born: birthYear, password = 'N/A' } = user;
 
-// user는 password를 가지고있기때문에 원래 가지고있던 데이터가 password변수에 대입되었다.
-console.log(password); // abcdefg!!
+// // user는 password를 가지고있기때문에 원래 가지고있던 데이터가 password변수에 대입되었다.
+// console.log(password); // abcdefg!!
+
+
+// const user = {
+//     email: 'lhslhs301@gmail.com',
+//     password: 'abcdefg!!',
+//     firstName: 'Jo',
+//     lastName: 'HyeonJun',
+//     born: 2000,
+//     city: 'deagu',
+//     state: 'Republic of Korea'
+// }
+
+// function fullName(user) {
+//     return `${user.firstName} ${user.lastName}`;
+// }
+// console.log(fullName(user)); // Jo HyeonJun
+
+// // 분할대입을 사용
+// function fullName(user) {
+//     const {firstName, lastName} = user;
+//     return `${firstName} ${lastName}`;
+// }
+// console.log(fullName(user)); // Jo HyeonJun
+
+// 파라미터에 분할대입을 할 수있다.(default도 설정가능)
+// function fullName({firstName, lastName}) {
+//     return `${firstName} ${lastName}`;
+// }
+// console.log(fullName(user)); // Jo HyeonJun
+
+
+// const movies = [ 
+//     {
+//         title: 'Amadeus',
+//         score: 99,
+//         year: 1984
+//     },
+    
+//     {
+//         title: 'Stand By Me',
+//         score: 85,
+//         year: 2013
+//     },
+    
+//     {
+//         title: 'Parasite',
+//         score: 92,
+//         year: 2004
+//     },
+    
+//     {
+//         title: 'Alien',
+//         score: 90,
+//         year: 1995
+//     },
+//     {
+//         title: 'Attack On titan',
+//         score: 100,
+//         year: 2015
+//     }
+// ]
+// // 분할대입을 사용하지않은 구문
+// movies.filter(movie => movies.score >= 90);
+// // 분할대입을 사용한 구문 score를 직접 가져오기에 movies.이 필요없다.
+// movies.filter(({score}) => score >= 90);
+// // 0: {title: 'Amadeus', score: 99, year: 1984}
+// // 1: {title: 'Parasite', score: 92, year: 2004}
+// // 2: {title: 'Alien', score: 90, year: 1995}
+// // 3: {title: 'Attack On titan', score: 100, year: 2015}
+
+// // 분할대입을 사용하지않은 구문
+// movies.map(movie => {
+//     return `${movie.title}(${movie.year}): ${movie.score}/100`;
+// })
+// // 분할대입을 사용한 구문
+// movies.map(({title, year, score}) => {
+//     return `${title}(${year}): ${score}/100`;
+// })
+
+
