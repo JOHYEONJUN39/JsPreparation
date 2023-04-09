@@ -4,3 +4,10 @@
 //     link.innerText = '나는 링크다!!!!!';
 // }
 
+const allLinks = document.querySelectorAll('a');
+
+for (let link of allLinks) {
+    link.style.color = 'red';
+    link.style.textDecorationColor = 'magenta';
+    link.style.textDecorationStyle = 'wavy';
+}

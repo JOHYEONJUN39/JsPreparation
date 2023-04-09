@@ -198,4 +198,20 @@ input.setAttribute('type', 'text');
 // 'text'
 ```
 
+### getComputedStyle
+- style을 변경하는 것이 가능하다.
+- 최종적으로 적용된 스타일을 가져온다.
+- getComputedStyle(여기)에 넘기는건 요소의 오브젝트다 (선택자X)
+
+```js
+const h1 = document.querySelector('h1');
+
+getComputedStyle(h1).color
+// 'rgb(128, 0, 128)'
+getComputedStyle(h1).fontSize
+// '32px'
+getComputedStyle(h1).fontFamily
+// '"Apple SD Gothic Neo"'
+```
+
 
