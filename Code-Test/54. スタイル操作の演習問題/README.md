@@ -1,0 +1,39 @@
+## スタイル操作の演習問題
+
+`index.html`をあらかじめ用意しています。  
+`index.html`には変更を加えずに、JavaScript以下の変更を行ってください：  
+
+- `container`というIDの`div`を取得して、JavaScriptで`text-align`を`center`に更新してください
+- 画像を取得して、JavaScriptで`width`を`150px`に更新し、`border-radius`を`50%`に更新してください  
+
+```html
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Forest</title>
+    <script src="node_modules/babel-polyfill/dist/polyfill.js" type="text/javascript"> </script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+   <div id="container">
+        <h1>I &hearts; Trees</h1>
+        <img src="https://images.unsplash.com/photo-1596328546171-77e37b5e8b3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="">
+    </div>
+</body>
+
+</html>
+```
+
+```js
+const con = document.querySelector('#container');
+
+con.style.textAlign = 'center';
+
+const img = document.querySelector('img');
+
+img.style.width = '150px';
+img.style.borderRadius = '50%';
+```
