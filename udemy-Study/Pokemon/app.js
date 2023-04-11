@@ -27,3 +27,7 @@ for (let i = 1; i < 151; i++) {
     container.appendChild(pokemon);
 }
 
+
+
+const people = ['a', 'b', 'c', 'd']
+console.log(people[0].toUpperCase());
