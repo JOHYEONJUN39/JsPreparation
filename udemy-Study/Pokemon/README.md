@@ -1,7 +1,7 @@
 ## 포켓몬 도감 만들기
 - querySelector, createElement를 응용하여 js에서 html요소를 추가해보자.
 
-<img src="https://i.ibb.co/HKM95Hz/2023-04-11-9-52-53.png" alt="2023-04-11-9-52-53" width="3584" height="1958" data-is360="0" data-load="full" class="cursor-zoom-in" style="width: 350px; height: 200px; display: block;">
+<img src="https://i.ibb.co/HKM95Hz/2023-04-11-9-52-53.png" alt="2023-04-11-9-52-53" width="3584" height="1958" data-is360="0" data-load="full" class="cursor-zoom-in" style="width: 750px; height: 400px; display: block;">
 
 
 ```html
