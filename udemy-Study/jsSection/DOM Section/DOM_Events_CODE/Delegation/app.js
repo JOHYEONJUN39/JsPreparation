@@ -20,15 +20,46 @@ const addTweet = (username, tweet) => {
     tweetsContainer.append(newTweet);
 }
 
-tweetsContainer.addEventListener('click', function (e) {
+// ul에 event를 추가
+tweetsContainer.addEventListener('click', function(e) {
+    // // nodeName이외에도 tagName등 event요소에 여러가지있다 잘 보고 골라쓰자
     // if (e.target.nodeName === 'LI') {
     //     e.target.remove();
-    // } else if (e.target.nodeName === 'B') {
+    // }
+    // // 만약 B태그를 눌렀을때도 remove를 하고싶으면
+    // else if (e.target.nodeName === 'B') {
+    //     // (B)의 부모는 LI
     //     e.target.parentElement.remove();
     // }
-    // e.target.nodeName === 'LI' && e.target.remove();
+    // // 위 조건문을 간단하게 생략하면
+    // // e.target.nodeName === 'LI' && e.target.remove();
 
     if (e.target.nodeName === 'LI' || e.target.nodeName === 'B') {
+        // target의 가장 가까이있는 요소를 가져온다.
         e.target.closest('LI').remove();
     }
 })
+
+
+
+
+
+
+
+
+
+
+// tweetsContainer.addEventListener('click', function (e) {
+//     // if (e.target.nodeName === 'LI') {
+//     //     e.target.remove();
+//     // } else if (e.target.nodeName === 'B') {
+//     //     e.target.parentElement.remove();
+//     // }
+//     // e.target.nodeName === 'LI' && e.target.remove();
+
+//     if (e.target.nodeName === 'LI' || e.target.nodeName === 'B') {
+//         e.target.closest('LI').remove();
+//     }
+// })
+
+
