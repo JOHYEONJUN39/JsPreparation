@@ -44,34 +44,54 @@ const fakeRequestPromise = (url) => {
 // })
 // // 성공할지 실패할지는 잘 보는것이 중요하다.
 
-fakeRequestPromise('yelp.com/api/coffee/page1')
-    .then(() => {
-        console.log('성공!! 1');
-        fakeRequestPromise('yelp.com/api/coffee/page2')
-        .then(() => {
-            console.log('성공!! 2');
-            fakeRequestPromise('yelp.com/api/coffee/page3')
-            .then(() => {
-                console.log('성공!! 3');
+// fakeRequestPromise('yelp.com/api/coffee/page1')
+//     .then(() => {
+//         console.log('성공!! 1');
+//         fakeRequestPromise('yelp.com/api/coffee/page2')
+//         .then(() => {
+//             console.log('성공!! 2');
+//             fakeRequestPromise('yelp.com/api/coffee/page3')
+//             .then(() => {
+//                 console.log('성공!! 3');
                 
-            })
-            .catch(() => {
-                console.log('실패!! 3');
+//             })
+//             .catch(() => {
+//                 console.log('실패!! 3');
 
-            });
+//             });
             
-        })
-        .catch(() => {
-            console.log('실패!! 2');
+//         })
+//         .catch(() => {
+//             console.log('실패!! 2');
 
-        });
+//         });
         
-    })
-    .catch(() => {
-        console.log('실패!! 1');
+//     })
+//     .catch(() => {
+//         console.log('실패!! 1');
         
-    })
+//     })
 
+
+fakeRequestPromise('yelp.com/api/coffee/page1')
+    .then((data) => {
+        console.log('성공1');
+        console.log(data); // ダミーデータ(yelp.com/api/coffee/page1)
+        return fakeRequestPromise('yelp.com/api/coffee/page2')
+    })
+    .then((data) =>{
+        console.log('성공2');
+        console.log(data); // ダミーデータ(yelp.com/api/coffee/page2)
+        return fakeRequestPromise('yelp.com/api/coffee/page3')
+    })
+    .then((data) =>{
+        console.log('성공3');
+        console.log(data); // ダミーデータ(yelp.com/api/coffee/page3)
+    })
+    .catch((err) => {
+        console.log('실패!!!!!!');
+        console.log(err); // コネクションタイムアウト
+    });
 
 
 
