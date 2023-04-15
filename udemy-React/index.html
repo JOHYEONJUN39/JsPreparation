@@ -1,17 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script defer src="./main.js"></script>
+    <title>Todo List with BULMA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./main.css">
+    <script defer src="./main.js"></script>
 </head>
-
 <body>
-    <p>수정했습니다.</p>
-</body>
+    <div class="container is-max-desktop has-text-centered">
+        <h1 class="title is-1">ToDo List !!</h1>
+        <h2 class="subtitle is-4">Just Do It !!</h2>
+        <div class="input-area">
+            <input id="add-text" class="input is-medium mb-4" placeholder="TODO를 입력" type="text">
+            <button id="add-button" class="button is-info is-medium ml-3">추가</button>
+        </div>
 
+        <div class="columns mt-6">
+            <div class="column">
+                <div class="incomplete-area">
+                    <p class="title has-text-danger-dark mb-4">미완료 TODO</p>
+                    <ul class="list-row">
+                        <li class="mb-4">
+                            <!-- <span class="is-size-4">TODO입니다.</span>
+                            <button class="button is-success is-medium ml-4 mr-4">완료</button>
+                            <button class="button is-danger is-medium">삭제</button> -->
+                        </li>
+
+                        <li class="mb-4">
+                            <!-- <span class="is-size-4">TODO입니다.</span>
+                            <button class="button is-success is-medium ml-4 mr-4">완료</button>
+                            <button class="button is-danger is-medium">삭제</button> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="complete-area">
+                    <p class="title has-text-success-dark mb-4">완료한 TODO</p>
+                    <ul class="list-row">
+                        <li class="mb-4">
+                            <!-- <span class="is-size-4">TODO입니다.</span>
+                            <button class="button is-warning is-medium ml-4">되돌리기</button> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
 </html>
