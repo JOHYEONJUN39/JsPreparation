@@ -625,3 +625,35 @@ const onClickComplete = (index) => {
   </ul>
 </div>
 ```
+
+- 여기부턴 뭐 똑같다
+- 되돌리기 버튼 구현
+
+```jsx
+{completeTodos.map((todo, index) => {
+  return (
+    <div key="todo" className="list-row">
+      <li>{todo}</li>
+      <button onClick={() => onClickBack(index)}>되돌리기</button>
+    </div>
+  );
+})}
+```
+- 되돌리기 버튼에 onClick으로 onClickBack 함수 호출
+```jsx
+const onClickBack = (index) => {
+  // 새로적용할 완료todo에 기존 완료todo대입
+  const newCompleteTodo = [...completeTodos];
+  // 새 완료todo에서 되돌리기 버튼을 누른 번째의 todo를 삭제
+  newCompleteTodo.splice(index, 1);
+  // 되돌리기니까 새로운 미완료todo도 만듦 기존 미완료todo와 방금 삭제한 todo를 붙여 새로운 배열을 만듦
+  const newIncompleteTodos = [...incompleteTodos, completeTodos[index]];
+
+  // 적용
+  setIncompleteTodos(newIncompleteTodos);
+  setcompleteTodos(newCompleteTodo);
+};
+```
+
+## 컴포넌트화
+
