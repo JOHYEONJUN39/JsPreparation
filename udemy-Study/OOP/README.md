@@ -151,7 +151,7 @@ firstColor.hex() // '#23ff96'
 ```
 - 팩토리함수는 객체지향개념 이전에 사용하던 함수
 팩토리함수를 사용함으로써 인스턴스, 메소드를 작성하는것이 가능  
-그럼 어째서 팩토리함수를 사용하지않는걸까? 콘스트럭터 함수를 배우며 알아보자
+그럼 어째서 팩토리함수를 사용하지않는걸까? 생성자 함수를 배우며 알아보자
 **팩토리함수의 디메리트**
 - makeColor라는 함수를 호출할때마다 안에있는 rgb, hex 메소드는 전부 새로 생성된다.  
   이것은 아래와같이 증명할 수 있다.
@@ -168,7 +168,7 @@ firstColor.hex === black.hex // false
 모든 스트링에대해 새로 만드는 함수가아니기 때문  
 String자체에는 slice라는 메소드가 정의되어있는것이 아닌  
 prototype의 String에 정의되어있는 메소드를 사용하기때문
-### 콘스트럭터 함수
+### 생성자 함수
 ```js
 function Color(r, g, b) {
     this.r = r;
@@ -220,7 +220,7 @@ r: 40
 ```
 프로토타입에 rgb메소드가있는걸 확인할 수 있다.
 - 팩토리함수의 경우에는 100개 Color객체를 찍으면 메소드도 100개찍히게되는것
-- 콘스트럭터를 사용하면 1개의 메소드를 정의하여 새로운 객체를 찍어 사용할 수 있는것
+- 생성자를 사용하면 1개의 메소드를 정의하여 새로운 객체를 찍어 사용할 수 있는것
 ```js
 const color1 = new Color(40, 255, 60);
 const color2 = new Color(0, 0, 0);
@@ -234,4 +234,71 @@ color1.rgb === color2.rgb // true
 ```
 이번에야말로 같은 프로토타입 메소드임을 나타낸다.
 ### JavaScript의 클래스
+- 생성자, 프로토타입을 좀더 깔끔하고 알기쉽게 작성가능
+```js
+class Color {
+    // 생성자
+    constructor(r, g, b, name) {
+        console.log("생성자 호출");
+        this.r = r;
+        this.g = g;
+        this.b = b;
+        this.name = name;
+    }
+
+    greet() {
+        return `HELLO FROM ${this.name}!`;
+    }
+
+    rgb() {
+        const { r, g, b } = this;
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    hex() {
+        const { r, g, b } = this;
+        return (
+            '#' +
+            ((1 << 24) + (r << 16) + (g << 8) + b)
+                .toString(16)
+                .slice(1)
+        );
+    }
+
+    rgba(a = 1.0) {
+        return `rgba(${this.innerRGB()}, ${a})`;
+    }
+
+    innerRGB() {
+        const { r, g, b } = this;
+        return `${r}, ${g}, ${b}`;
+    }
+
+}
+
+const red = new Color(255, 67, 89, "tomato");
+const white = new Color(255, 255, 255, "white");
+```
+```js
+red.rgb()
+'rgb(255, 67, 89)'
+white.rgb()
+'rgb(255, 255, 255)'
+rgb()의 this는 .의 왼쪽에있는 red, white이다.
+```
+```js
+rgba(a = 1.0) {
+    const {r, g, b} = this;
+    return `rgba(${r}, ${g}, ${b}, ${a})`;
+}
+```
+굳이 r, g, b 값을 새로 불러올필요가 있을까?  
+기존에 r, g, b를 불러오는 rgb()를 사용하면 되는일이다.
+```js
+rgba(a = 1.0) {
+    return `rgba(${this.innerRGB()}, ${a})`;
+}
+```
+return에서 다른 메소드를 호출하는것이 가능하다  
+이렇게 작성하면 r, g, b를 새롭게 가져올 필요가 없다.
 ### extends와 super
