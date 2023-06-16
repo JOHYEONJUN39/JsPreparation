@@ -302,3 +302,37 @@ rgba(a = 1.0) {
 return에서 다른 메소드를 호출하는것이 가능하다  
 이렇게 작성하면 r, g, b를 새롭게 가져올 필요가 없다.
 ### extends와 super
+```js
+class Animal {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    eat() {
+        console.log(`${this.name} is eating`);
+    }
+}
+
+class Cat extends Animal{
+    constructor(name, age, jumpHeight = 5) {
+        super(name, age);
+        this.jumpHeight = jumpHeight;
+    }
+    meow() {
+        console.log("MEOWWWW!!");
+    }
+
+}
+
+class Dog extends Animal{
+    bark() {
+        console.log("BARKKKKK!!");
+    }
+
+}
+```
+extends로 중복되는 기능을 계승하는 것이 가능하다.    
+super는 부모의 생성자를 가르키며 위 코드에서는  
+super(name, age)를 해주는것으로 name과 age를 초기화한다.  
+
