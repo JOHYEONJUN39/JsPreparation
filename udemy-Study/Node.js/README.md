@@ -224,3 +224,9 @@ jokes.getRandomDadJoke(function(joke) {
             (__)\       )\/\
                 ||----w |
                 ||     ||
+- npm uninstall -g <패키지 이름> 으로 글로벌 패키지를 삭제할 수 있다.
+
+## package.json에 대하여
+- npm init 명령어를 통해 package.json을 생성할 수 있다.
+- npm init -y 명령어를 통해 기본값으로 package.json을 생성할 수 있다.
+  
